@@ -25,7 +25,7 @@ const Collaborate: React.FC<CollaborateProps> = ({ scroll }) => {
   return (
     <div style={CollaborateStyle}>
       <h3
-        className={`text-73 font-bold mb-[50px] border-y border-t-0 inline-block px-[50px] lg:left-[-1000px] relative ${
+        className={`text-43 md:text-73 font-bold mb-[50px] border-y border-t-0 inline-block px-[50px] lg:left-[-1000px] relative ${
           scroll > 2400 ? "transition-origin" : ""
         }`}
       >
@@ -33,7 +33,7 @@ const Collaborate: React.FC<CollaborateProps> = ({ scroll }) => {
       </h3>
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-5">
         <div>
-          <div className="grid grid-cols-3 text-left mb-5 pl-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 text-left mb-5 pl-4">
             <div>
               <input type="radio" style={radioStyle} name="collaborater" /> 
               <label className="text-21 font-semibold">Founder</label>
@@ -86,14 +86,11 @@ const Collaborate: React.FC<CollaborateProps> = ({ scroll }) => {
           <div className="hex py-4">
             <textarea
               rows={15}
-              className="bg-transparent w-full outline-none relative z-99 font-semibold"
+              className="bg-transparent w-full outline-none relative z-99 font-semibold h-[177px] md:h-[360px]"
               placeholder="What is the fiction about?"
             />
           </div>
-          <div
-            className="absolute h-[68px] overflow-hidden w-full m-auto"
-            style={{ transform: "scaleY(-1)", top: "425px" }}
-          >
+          <div className="absolute h-[68px] overflow-hidden w-full m-auto submit-btn">
             <div className="hex text-black" style={{ background: "#fff" }}>
               <button
                 className="text-43 text-black font-bold w-full relative"

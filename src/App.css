@@ -64,10 +64,58 @@ body {
   transform: rotate(-60deg);
 }
 
+.submit-btn {
+  transform: scaleY(-1);
+  top: 425px;
+}
+
 @media (min-width: 1024px) {
   .transition-origin {
     left: 0px;
     top: 0px;
     transition: all 0.7s;
+  }
+}
+
+@media (max-width: 768px) {
+  .hex {
+    position: relative;
+    margin: auto;
+    width: 160px;
+    height: 280px;
+    border-radius: 4px;
+    background: transparent;
+    transition: opacity 0.5s;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+  }
+
+  .hex:before,
+  .hex:after {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background: inherit;
+    content: "";
+    border-top: inherit;
+    border-bottom: inherit;
+    left: 0;
+    top: 0;
+  }
+
+  .hex:before {
+    -webkit-transform: rotate(60deg);
+    transform: rotate(60deg);
+  }
+
+  .hex:after {
+    -webkit-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+  }
+
+  .submit-btn {
+    transform: scaleY(-1);
+    top: 242px;
   }
 }
