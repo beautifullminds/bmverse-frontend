@@ -5,7 +5,9 @@ module.exports = {
     extend: {
       colors: {},
       fontSize: {
+        73: "73px",
         51: "51px",
+        43: "43px",
         34: "34px",
         28: "28px",
         26: "26px",

@@ -3,7 +3,9 @@ import React from "react";
 import Logo from "assets/imgs/logo.png";
 import LogoGod from "assets/imgs/logo-god.png";
 
-interface HeaderProps {}
+interface HeaderProps {
+  scrollH: number;
+}
 
 const buttonStyle = {
   color: "#fff",
@@ -19,12 +21,16 @@ const headerImgStyle = {
   marginTop: "-2px"
 };
 
-const Header: React.FC<HeaderProps> = () => {
+const Header: React.FC<HeaderProps> = ({ scrollH }) => {
   const pathname = window.location.pathname;
 
   return (
-    <div className="header-container ">
-      <div className="flex flex-wrap bg-black w-full p-2 pr-4">
+    <div className="header-container relative z-50">
+      <div
+        className={`flex flex-wrap bg-black w-full p-2 pr-4 ${
+          scrollH > 0 ? "fixed" : "relative"
+        }`}
+      >
         <div className="w-auto pt-2 md:w-1/3">
           <img src={Logo} alt="logo" width={54} />
         </div>

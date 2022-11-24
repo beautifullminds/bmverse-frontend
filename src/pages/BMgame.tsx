@@ -1,6 +1,8 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Layout from "components/Layout";
 import Menu from "components/Menu";
+import BMblog from "components/BMblog";
+import Collaborate from "components/Collaborate";
 
 import Space from "assets/imgs/space.png";
 import Stones from "assets/imgs/stones.png";
@@ -11,9 +13,19 @@ interface BMgameProps {}
 
 const BMgame: React.FC<BMgameProps> = () => {
   const layoutView = useRef(null);
+  const [scrollH, setScrollH] = useState(-1);
+
+  useEffect(() => {
+    setScrollH(0);
+    const onScroll = () => setScrollH(window.pageYOffset);
+    // clean up code
+    window.removeEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <Layout ref={layoutView}>
+    <Layout ref={layoutView} scroll={scrollH}>
       <Menu />
       <div className="bm-content">
         <div className="content text-center">
@@ -23,7 +35,11 @@ const BMgame: React.FC<BMgameProps> = () => {
             Professionals
           </p>
           <div className="mt-[30px] grid md:grid-cols-2 grid-cols-1 gap-3">
-            <div className="md:mt-[150px] mt-2">
+            <div
+              className={`md:mt-[150px] mt-2 lg:left-[-1000px] relative ${
+                scrollH >= 0 ? "transition-origin" : ""
+              }`}
+            >
               <h4 className="text-23 font-bold">GAMIFICATION</h4>
               <div className="text-18 border p-2 rounded-[18px] text-left">
                 Among all the projects working in the rarity field, the one that
@@ -33,14 +49,22 @@ const BMgame: React.FC<BMgameProps> = () => {
                 would lead to project strength.
               </div>
             </div>
-            <div>
+            <div
+              className={`lg:left-[1000px] relative ${
+                scrollH >= 0 ? "transition-origin" : ""
+              }`}
+            >
               <img src={Space} alt="space" />
             </div>
           </div>
           <p className="text-26 font-semibold mt-[40px] mb-2">
             Everything is ready for any game development team here.
           </p>
-          <div className="md:flex rounded-[120px] bg-black py-[60px] px-4 md:px-[60px] drop-shadow-[5px_7px_0px_rgba(0,0,0,0.7)]">
+          <div
+            className={`md:flex rounded-[120px] bg-black py-[60px] px-4 md:px-[60px] drop-shadow-[5px_7px_0px_rgba(0,0,0,0.7)] lg:top-[1000px] relative ${
+              scrollH > 240 ? "transition-origin" : ""
+            }`}
+          >
             <div>
               <img src={Stones} alt="stone" />
             </div>
@@ -90,6 +114,12 @@ const BMgame: React.FC<BMgameProps> = () => {
             people’s abilities are used.
           </div>
         </div>
+      </div>
+      <div className="com-content">
+        <BMblog scroll={scrollH} />
+      </div>
+      <div className="com-content">
+        <Collaborate scroll={scrollH} />
       </div>
     </Layout>
   );

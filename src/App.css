@@ -1,19 +1,73 @@
 body {
   font-family: "Rajdhani", sans-serif;
+  color: #fff;
 }
 .bm-content {
   padding: 0 200px;
 }
 .content {
-  background: rgba(16, 58, 153, 0.2);
-  color: #fff;
+  background: rgba(16, 16, 16, 0.2);
   margin-top: 30px;
   border-radius: 8px;
   padding: 40px;
+  position: relative;
+}
+
+.com-content {
+  margin-top: 50px;
+  padding: 0 100px;
+  text-align: center;
 }
 
 @media (max-width: 1024px) {
   .bm-content {
     padding: 0 40px;
+  }
+  .com-content {
+    padding: 0 20px;
+  }
+}
+
+.hex {
+  position: relative;
+  margin: auto;
+  width: 270px;
+  height: 460px;
+  border-radius: 7px;
+  background: transparent;
+  transition: opacity 0.5s;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.hex:before,
+.hex:after {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background: inherit;
+  content: "";
+  border-top: inherit;
+  border-bottom: inherit;
+  left: 0;
+  top: 0;
+}
+
+.hex:before {
+  -webkit-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+
+.hex:after {
+  -webkit-transform: rotate(-60deg);
+  transform: rotate(-60deg);
+}
+
+@media (min-width: 1024px) {
+  .transition-origin {
+    left: 0px;
+    top: 0px;
+    transition: all 0.7s;
   }
 }
