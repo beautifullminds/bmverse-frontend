@@ -25,7 +25,9 @@ const scrollHeightArr: { path: string; height: number }[] = [
   { path: "/bmgame", height: 2400 },
   { path: "/bmgalaxy", height: 5100 },
   { path: "/bmcard", height: 3200 },
-  { path: "/bmmusic", height: 3200 }
+  { path: "/bmmusic", height: 3200 },
+  { path: "/bmmega", height: 5200 },
+  { path: "/bmjewel", height: 3300 }
 ];
 
 const Collaborate: React.FC<CollaborateProps> = ({ scroll }) => {

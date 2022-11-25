@@ -61,7 +61,7 @@ const BMgame: React.FC<BMgameProps> = () => {
             Everything is ready for any game development team here.
           </p>
           <div
-            className={`md:flex rounded-[120px] bg-black py-[60px] px-4 md:px-[60px] drop-shadow-[5px_7px_0px_rgba(0,0,0,0.7)] lg:top-[1000px] relative ${
+            className={`md:flex rounded-[120px] bg-[rgba(0,0,0,0.5)] py-[60px] px-4 md:px-[60px] shadow-[0px_10px_0px_rgba(0,0,0,0.2)] lg:top-[1000px] relative ${
               scrollH > 240 ? "transition-origin" : ""
             }`}
           >
@@ -93,7 +93,13 @@ const BMgame: React.FC<BMgameProps> = () => {
             by which We will show the alpha generation that man is a creator And
             not just a consumer.
           </div>
-          <img className="mx-auto my-[40px]" src={Cons} alt="cons" />
+          <div
+            className={`lg:left-[1000px] relative ${
+              scrollH > 1040 ? "transition-origin" : ""
+            }`}
+          >
+            <img className="mx-auto my-[40px]" src={Cons} alt="cons" />
+          </div>
           <div className="font-semibold text-34">
             Generations move one after another toward evolution
           </div>

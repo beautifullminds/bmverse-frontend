@@ -16,6 +16,23 @@ import VainsImg from "assets/imgs/galaxy/vains.png";
 
 interface BMgalaxyProps {}
 
+const bg1Style = {
+  borderRadius: "10px",
+  background: "rgba(0,0,0,0.2)"
+};
+
+const bg2Style = {
+  borderRadius: "15px",
+  background: "rgba(255,98,0,0.05)",
+  border: "1px solid #FF6600"
+};
+
+const bg3Style = {
+  borderRadius: "15px",
+  background: "rgba(42,59,78,0.2)",
+  padding: "20px"
+};
+
 const BMgalaxy: React.FC<BMgalaxyProps> = () => {
   const layoutView = useRef(null);
   const [scrollH, setScrollH] = useState(-1);
@@ -27,23 +44,6 @@ const BMgalaxy: React.FC<BMgalaxyProps> = () => {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  const bg1Style = {
-    borderRadius: "10px",
-    background: "rgba(0,0,0,0.2)"
-  };
-
-  const bg2Style = {
-    borderRadius: "15px",
-    background: "rgba(255,98,0,0.05)",
-    border: "1px solid #FF6600"
-  };
-
-  const bg3Style = {
-    borderRadius: "15px",
-    background: "rgba(42,59,78,0.2)",
-    padding: "20px"
-  };
 
   return (
     <Layout ref={layoutView} scroll={scrollH}>
