@@ -13,7 +13,7 @@ const menus: IMenu[] = [
   { label: "BM Mega", url: "bmmega" },
   { label: "BM Music", url: "bmmusic" },
   { label: "BM Jewel", url: "bmjewel" },
-  { label: "BM Cards", url: "bmcards" },
+  { label: "BM Cards", url: "bmcard" },
   { label: "BM Learn", url: "bmlearn" }
 ];
 

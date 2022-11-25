@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 interface CollaborateProps {
   scroll: number;
@@ -21,12 +21,31 @@ const submitBtnStyle = {
   zIndex: 9
 };
 
+const scrollHeightArr: { path: string; height: number }[] = [
+  { path: "/bmgame", height: 2400 },
+  { path: "/bmgalaxy", height: 5100 },
+  { path: "/bmcard", height: 3200 },
+  { path: "/bmmusic", height: 3200 }
+];
+
 const Collaborate: React.FC<CollaborateProps> = ({ scroll }) => {
+  const [sh, setSh] = useState(0);
+
+  useEffect(() => {
+    const pathname = window.location.pathname;
+    const fH = scrollHeightArr.find(
+      (item: { path: string; height: number }) => item.path === pathname
+    );
+    if (fH) {
+      setSh(fH.height);
+    }
+  }, []);
+
   return (
     <div style={CollaborateStyle}>
       <h3
-        className={`text-43 md:text-73 font-bold mb-[50px] border-y border-t-0 inline-block px-[50px] lg:left-[-1000px] relative ${
-          scroll > 2400 ? "transition-origin" : ""
+        className={`text-43 md:text-73 font-bold mb-[50px] border-y border-t-0 inline-block px-[50px] lg:left-[-1200px] relative ${
+          sh > 0 && scroll > sh ? "transition-origin" : ""
         }`}
       >
         Collaborate

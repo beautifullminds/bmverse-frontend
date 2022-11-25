@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 interface BMblogProps {
   scroll: number;
@@ -16,12 +16,31 @@ const blogItemStyle = {
   minHeight: "400px"
 };
 
+const scrollHeightArr: { path: string; height: number }[] = [
+  { path: "/bmgame", height: 1800 },
+  { path: "/bmgalaxy", height: 4500 },
+  { path: "/bmcard", height: 2600 },
+  { path: "/bmmusic", height: 2600 }
+];
+
 const BMblog: React.FC<BMblogProps> = ({ scroll }) => {
+  const [sh, setSh] = useState(0);
+
+  useEffect(() => {
+    const pathname = window.location.pathname;
+    const fH = scrollHeightArr.find(
+      (item: { path: string; height: number }) => item.path === pathname
+    );
+    if (fH) {
+      setSh(fH.height);
+    }
+  }, []);
+
   return (
     <div style={BMblogStyle}>
       <h3
         className={`text-73 font-bold mb-5 lg:left-[-1000px] relative ${
-          scroll > 1800 ? "transition-origin" : ""
+          sh > 0 && scroll > sh ? "transition-origin" : ""
         }`}
       >
         BM Blog

@@ -1,6 +1,8 @@
 body {
   font-family: "Rajdhani", sans-serif;
   color: #fff;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 .bm-content {
   padding: 0 200px;
@@ -17,15 +19,6 @@ body {
   margin-top: 50px;
   padding: 0 100px;
   text-align: center;
-}
-
-@media (max-width: 1024px) {
-  .bm-content {
-    padding: 0 40px;
-  }
-  .com-content {
-    padding: 0 20px;
-  }
 }
 
 .hex {
@@ -74,6 +67,15 @@ body {
     left: 0px;
     top: 0px;
     transition: all 0.7s;
+  }
+}
+
+@media (max-width: 1024px) {
+  .bm-content {
+    padding: 0 40px;
+  }
+  .com-content {
+    padding: 0 20px;
   }
 }
 
