@@ -22,7 +22,8 @@ const scrollHeightArr: { path: string; height: number }[] = [
   { path: "/bmcard", height: 2600 },
   { path: "/bmmusic", height: 2600 },
   { path: "/bmmega", height: 4600 },
-  { path: "/bmjewel", height: 2700 }
+  { path: "/bmjewel", height: 2700 },
+  { path: "/bmlearn", height: 3800 }
 ];
 
 const BMblog: React.FC<BMblogProps> = ({ scroll }) => {
