@@ -5,14 +5,15 @@ import {
   Navigate
 } from "react-router-dom";
 
-import "./App.css";
-import BMgame from "pages/BMgame";
-import BMgalaxy from "pages/BMgalaxy";
-import BMmusic from "pages/BMmusic";
-import BMcard from "pages/BMcard";
-import BMmega from "pages/BMmega";
-import BMjewel from "pages/BMjewel";
-import BMlearn from "pages/BMlearn";
+import "./App.scss";
+import BMgame from "pages/BMblocks/BMgame";
+import BMgalaxy from "pages/BMblocks/BMgalaxy";
+import BMmusic from "pages/BMblocks/BMmusic";
+import BMcard from "pages/BMblocks/BMcard";
+import BMmega from "pages/BMblocks/BMmega";
+import BMjewel from "pages/BMblocks/BMjewel";
+import BMlearn from "pages/BMblocks/BMlearn";
+import AntverseMint from "pages/BMmints/AntverseMint";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/bmmega" element={<BMmega />} />
         <Route path="/bmjewel" element={<BMjewel />} />
         <Route path="/bmlearn" element={<BMlearn />} />
+        <Route path="/antversemint" element={<AntverseMint />} />
       </Routes>
     </Router>
   );

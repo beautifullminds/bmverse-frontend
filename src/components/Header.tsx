@@ -17,13 +17,7 @@ const buttonStyle = {
   fontWeight: 500
 };
 
-const headerImgStyle = {
-  marginTop: "-2px"
-};
-
 const Header: React.FC<HeaderProps> = ({ scrollH }) => {
-  const pathname = window.location.pathname;
-
   return (
     <div className="header-container relative z-50">
       <div
@@ -43,13 +37,6 @@ const Header: React.FC<HeaderProps> = ({ scrollH }) => {
         <div className="text-right pt-3 w-full md:w-1/3 text-18 md:text-22">
           <button style={buttonStyle}>Connect Wallet</button>
         </div>
-      </div>
-      <div style={headerImgStyle}>
-        <img
-          className="object-cover"
-          src={require(`assets/imgs${pathname}-header.png`)}
-          alt="headerimage"
-        />
       </div>
     </div>
   );

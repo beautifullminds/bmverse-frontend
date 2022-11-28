@@ -4,6 +4,19 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
 }
+.landing-container {
+  min-height: 4300px;
+  background: linear-gradient(
+    -125deg,
+    #2075e3 0%,
+    #210e39 50vw,
+    #1d1d1d 100vw,
+    #ff006f 120vw,
+    #2b022e 140vw,
+    #0b305a 100%
+  );
+  padding-bottom: 150px;
+}
 .bm-content {
   padding: 0 200px;
 }

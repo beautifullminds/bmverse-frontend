@@ -1,8 +1,9 @@
 import React, { useRef, useEffect, useState } from "react";
 import Layout from "components/Layout";
 import Menu from "components/Menu";
-import BMblog from "components/BMblog";
-import Collaborate from "components/Collaborate";
+import BMblog from "components/blocks/BMblog";
+import Collaborate from "components/blocks/Collaborate";
+import LandingHeader from "components/blocks/LandingHeader";
 
 interface BMmusicProps {}
 
@@ -20,17 +21,20 @@ const BMmusic: React.FC<BMmusicProps> = () => {
 
   return (
     <Layout ref={layoutView} scroll={scrollH}>
-      <Menu />
-      <div className="bm-content">
-        <div className="content text-center" style={{ minHeight: "3000px" }}>
-          <h2 className="text-46 md:text-64 font-bold">BM MUSIC</h2>
+      <div className="landing-container">
+        <LandingHeader />
+        <Menu />
+        <div className="bm-content">
+          <div className="content text-center" style={{ minHeight: "3000px" }}>
+            <h2 className="text-46 md:text-64 font-bold">BM MUSIC</h2>
+          </div>
         </div>
-      </div>
-      <div className="com-content">
-        <BMblog scroll={scrollH} />
-      </div>
-      <div className="com-content">
-        <Collaborate scroll={scrollH} />
+        <div className="com-content">
+          <BMblog scroll={scrollH} />
+        </div>
+        <div className="com-content">
+          <Collaborate scroll={scrollH} />
+        </div>
       </div>
     </Layout>
   );

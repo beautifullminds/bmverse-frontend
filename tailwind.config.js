@@ -6,18 +6,24 @@ module.exports = {
       colors: {
         orange: "#FF6600",
         blue: "#5d5ad8",
-        red: "#780a24"
+        red: "#780a24",
+        gray: "#707070"
       },
       fontSize: {
+        96: "96px",
         82: "82px",
         73: "73px",
         64: "64px",
+        56: "56px",
+        55: "55px",
+        53: "53px",
         51: "51px",
         47: "47px",
         46: "46px",
         43: "43px",
         42: "42px",
         38: "38px",
+        37: "37px",
         36: "36px",
         34: "34px",
         33: "33px",
@@ -26,6 +32,7 @@ module.exports = {
         30: "30px",
         28: "28px",
         26: "26px",
+        25: "25px",
         24: "24px",
         23: "23px",
         22: "22px",
@@ -37,7 +44,8 @@ module.exports = {
         10: "10px"
       },
       letterSpacing: {
-        wide: "10px"
+        wide: "10px",
+        standard: "4px"
       }
     }
   },
