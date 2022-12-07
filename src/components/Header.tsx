@@ -21,20 +21,20 @@ const Header: React.FC<HeaderProps> = ({ scrollH }) => {
   return (
     <div className="header-container relative z-50">
       <div
-        className={`flex flex-wrap bg-black w-full p-2 pr-4 ${
+        className={`flex flex-wrap bg-black w-full px-4 ${
           scrollH > 0 ? "fixed" : "relative"
         }`}
       >
-        <div className="w-auto pt-2 md:w-1/3">
+        <div className="w-auto md:w-1/3">
           <img src={Logo} alt="logo" width={54} />
         </div>
-        <div className="text-center pt-1 md:w-1/3">
+        <div className="text-center md:w-1/3">
           <img className="inline" src={LogoGod} width={62} alt="logo-god" />
           <span className="text-white text-22 lg:text-28 tracking-wide">
             BMVerse.io
           </span>
         </div>
-        <div className="text-right pt-3 w-full md:w-1/3 text-18 md:text-22">
+        <div className="text-right md:pt-[12px] w-full md:w-1/3 text-18 md:text-22">
           <button style={buttonStyle}>Connect Wallet</button>
         </div>
       </div>
