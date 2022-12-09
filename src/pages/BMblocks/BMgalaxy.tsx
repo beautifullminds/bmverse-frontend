@@ -6,7 +6,6 @@ import Collaborate from "components/blocks/Collaborate";
 import LandingHeader from "components/blocks/LandingHeader";
 
 import GalaxyImg from "assets/imgs/galaxy/galaxy.png";
-import Galaxy1Img from "assets/imgs/galaxy/galaxy1.png";
 import Galaxy5Img from "assets/imgs/galaxy/galaxy5.png";
 import LineImg from "assets/imgs/galaxy/Line.png";
 import LineImg1 from "assets/imgs/galaxy/lineImg.png";
@@ -14,6 +13,7 @@ import LineImg2 from "assets/imgs/galaxy/lineImg2.png";
 import ParaImg from "assets/imgs/galaxy/para.png";
 import LightTextImg from "assets/imgs/galaxy/lightText.png";
 import VainsImg from "assets/imgs/galaxy/vains.png";
+import LogoGod from "assets/imgs/logo-god.png";
 
 interface BMgalaxyProps {}
 
@@ -56,11 +56,31 @@ const BMgalaxy: React.FC<BMgalaxyProps> = () => {
             <h2 className="text-46 md:text-64 font-bold">BM GALAXY</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-[50px]">
               <div
-                className={`lg:left-[-1000px] relative ${
+                className={`bg-black rounded-[40px] lg:left-[-1000px] relative ${
                   scrollH >= 0 ? "transition-origin" : ""
                 }`}
               >
                 <img src={GalaxyImg} className="w-full" alt="galaxyimg" />
+                <div className="p-2 md:flex">
+                  <p className="md:w-4/5 text-left text-21 font-semibold relative">
+                    BMGalaxy is a unique masterpiece in combining Art and
+                    Technology.
+                    <img
+                      src={LogoGod}
+                      width={80}
+                      className="inline -mt-[60px] relative top-[35px]"
+                      alt="logoGod"
+                    />
+                  </p>
+                  <div className="md:w-1/5 p-3">
+                    <video className="m-auto mt-3 md:mt-0" loop autoPlay muted>
+                      <source
+                        src={require("assets/imgs/galaxy/video11.mp4")}
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
               </div>
               <div
                 className={`text-left text-26 md:text-30 font-medium md:mt-[100px] lg:left-[1000px] relative ${
@@ -213,16 +233,13 @@ const BMgalaxy: React.FC<BMgalaxyProps> = () => {
                 super-intelligent core of Metaverse-based games.
               </div>
             </div>
-            <div
-              className={`lg:top-[1400px] relative ${
-                scrollH >= 2900 ? "transition-origin" : ""
-              }`}
-            >
-              <img
-                src={Galaxy1Img}
-                alt="galaxy"
-                className="md:w-3/4 mx-auto my-6"
-              />
+            <div className="mt-3">
+              <video className="m-auto" loop autoPlay muted>
+                <source
+                  src={require("assets/imgs/galaxy/G5X_VP9.webm")}
+                  type="video/webm"
+                />
+              </video>
             </div>
 
             <div className="text-18 md:text-26 font-semibold" style={bg3Style}>

@@ -5,10 +5,10 @@ import BMblog from "components/blocks/BMblog";
 import Collaborate from "components/blocks/Collaborate";
 import LandingHeader from "components/blocks/LandingHeader";
 
-import Space from "assets/imgs/space.png";
-import Stones from "assets/imgs/stones.png";
-import Abstract from "assets/imgs/abstract.png";
-import Cons from "assets/imgs/cons.png";
+import Space from "assets/imgs/game/space.png";
+import Stones from "assets/imgs/game/stones.png";
+import Abstract from "assets/imgs/game/abstract.png";
+import Cons from "assets/imgs/game/cons.png";
 
 interface BMgameProps {}
 

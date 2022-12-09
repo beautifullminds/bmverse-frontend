@@ -114,7 +114,12 @@ const BMmega: React.FC<BMmegaProps> = () => {
                   scrollH >= 750 ? "transition-origin" : ""
                 }`}
               >
-                <img src={SekeGirlImg} alt="seke" />
+                <video className="m-auto" loop autoPlay muted>
+                  <source
+                    src={require("assets/imgs/mega/girl1.mp4")}
+                    type="video/mp4"
+                  />
+                </video>
               </div>
               <div
                 className={`text-left text-19 font-medium mt-4 w-full md:w-[60%] lg:left-[1200px] relative ${

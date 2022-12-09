@@ -24,8 +24,8 @@ const submitBtnStyle = {
 const scrollHeightArr: { path: string; height: number }[] = [
   { path: "/bmgame", height: 2400 },
   { path: "/bmgalaxy", height: 5100 },
-  { path: "/bmcard", height: 3200 },
-  { path: "/bmmusic", height: 3200 },
+  { path: "/bmcard", height: 1850 },
+  { path: "/bmmusic", height: 1800 },
   { path: "/bmmega", height: 5200 },
   { path: "/bmjewel", height: 3300 },
   { path: "/bmlearn", height: 4470 }

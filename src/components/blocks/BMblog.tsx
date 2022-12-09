@@ -19,8 +19,8 @@ const blogItemStyle = {
 const scrollHeightArr: { path: string; height: number }[] = [
   { path: "/bmgame", height: 1800 },
   { path: "/bmgalaxy", height: 4500 },
-  { path: "/bmcard", height: 2600 },
-  { path: "/bmmusic", height: 2600 },
+  { path: "/bmcard", height: 1290 },
+  { path: "/bmmusic", height: 1200 },
   { path: "/bmmega", height: 4600 },
   { path: "/bmjewel", height: 2700 },
   { path: "/bmlearn", height: 3800 }

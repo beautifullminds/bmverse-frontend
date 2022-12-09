@@ -13,7 +13,7 @@ const LandingHeader: React.FC<LandingHeaderProps> = () => {
     <div style={headerImgStyle}>
       <img
         className="object-cover"
-        src={require(`assets/imgs${pathname}-header.png`)}
+        src={require(`assets/imgs/header${pathname}-header.png`)}
         alt="headerimage"
       />
     </div>

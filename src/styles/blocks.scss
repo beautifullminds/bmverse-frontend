@@ -29,6 +29,11 @@ body {
   overflow: hidden;
 }
 
+.full-img {
+  width: calc(100% + 80px);
+  margin-left: -40px;
+}
+
 .com-content {
   margin-top: 50px;
   padding: 0 100px;
@@ -94,6 +99,13 @@ body {
 }
 
 @media (max-width: 768px) {
+  .content {
+    padding: 15px;
+  }
+  .full-img {
+    width: calc(100% + 30px);
+    margin-left: -15px;
+  }
   .hex {
     position: relative;
     margin: auto;
