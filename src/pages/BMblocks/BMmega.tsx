@@ -7,7 +7,6 @@ import LandingHeader from "components/blocks/LandingHeader";
 
 import QueenImg from "assets/imgs/mega/queen.png";
 import MultiQueenImg from "assets/imgs/mega/multipleQueen.png";
-import SekeGirlImg from "assets/imgs/mega/sekeGirl.png";
 import AntonImg from "assets/imgs/mega/Anton.png";
 import AntonLandImg from "assets/imgs/mega/AntonLand.png";
 import JewelCoverImg from "assets/imgs/mega/JewelCover.png";
