@@ -2,7 +2,7 @@
   "name": "bmverse",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://devwebok123.github.io/bmverse-frontend",
+  "homepage": "https://beautifullminds.github.io/bmverse-frontend",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
