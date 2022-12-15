@@ -14,7 +14,9 @@ const configs = {
     "https://mumbai.polygonscan.com/" /* https://polygonscan.com/ */,
   HASH_LINK_URL: "https://goerli.etherscan.io/tx/",
   BLOCK_EXPLORER: "https://goerli.etherscan.io",
-  WALLET_APP_NAME: "BMverse"
+  WALLET_APP_NAME: "BMverse",
+
+  BASE_URL: "bmverse-frontend"
 };
 
 export default configs;

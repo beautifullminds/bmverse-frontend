@@ -7,13 +7,14 @@ const headerImgStyle = {
 };
 
 const LandingHeader: React.FC<LandingHeaderProps> = () => {
-  const pathname = window.location.pathname;
+  const pathname = window.location.href;
+  const pagename = pathname.split("/")[pathname.split("/").length - 1];
 
   return (
     <div style={headerImgStyle}>
       <img
         className="object-cover"
-        src={require(`assets/imgs/header${pathname}-header.png`)}
+        src={require(`assets/imgs/header/${pagename}-header.png`)}
         alt="headerimage"
       />
     </div>

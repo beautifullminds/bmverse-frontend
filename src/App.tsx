@@ -1,9 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate
-} from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 import "./App.scss";
 import BMgame from "pages/BMblocks/BMgame";
@@ -17,19 +12,17 @@ import AntverseMint from "pages/BMmints/AntverseMint";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Navigate to="/bmgame" />} />
-        <Route path="/bmgame" element={<BMgame />} />
-        <Route path="/bmgalaxy" element={<BMgalaxy />} />
-        <Route path="/bmmusic" element={<BMmusic />} />
-        <Route path="/bmcard" element={<BMcard />} />
-        <Route path="/bmmega" element={<BMmega />} />
-        <Route path="/bmjewel" element={<BMjewel />} />
-        <Route path="/bmlearn" element={<BMlearn />} />
-        <Route path="/antversemint" element={<AntverseMint />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/" element={<Navigate to="/bmgame" />} />
+      <Route path="/bmgame" element={<BMgame />} />
+      <Route path="/bmgalaxy" element={<BMgalaxy />} />
+      <Route path="/bmmusic" element={<BMmusic />} />
+      <Route path="/bmcard" element={<BMcard />} />
+      <Route path="/bmmega" element={<BMmega />} />
+      <Route path="/bmjewel" element={<BMjewel />} />
+      <Route path="/bmlearn" element={<BMlearn />} />
+      <Route path="/antversemint" element={<AntverseMint />} />
+    </Routes>
   );
 }
 
