@@ -31,10 +31,7 @@ const BMlanding: React.FC<BMlandingProps> = () => {
 
   return (
     <Layout ref={layoutView} scroll={scrollH}>
-      <div className="px-5 bg-dark min-h-[100vh] py-[100px]">
-        <div className="text-43 font-medium text-center tracking-standard mb-[50px]">
-          Launch In 10/07/2022
-        </div>
+      <div className="px-5 bg-dark min-h-[100vh] py-[50px]">
         <div
           style={contentStyle}
           className="
@@ -54,6 +51,7 @@ const BMlanding: React.FC<BMlandingProps> = () => {
                 loop
                 autoPlay
                 muted
+                style={{ mixBlendMode: "screen" }}
               >
                 <source
                   src={require("assets/imgs/landing/video.mp4")}
