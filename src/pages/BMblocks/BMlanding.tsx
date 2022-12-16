@@ -6,7 +6,6 @@ import LinkedinIcon from "assets/imgs/landing/linkedin.png";
 import TwitterIcon from "assets/imgs/landing/twitter.png";
 import YoutubeIcon from "assets/imgs/landing/youtube.png";
 import MediumIcon from "assets/imgs/landing/medium.png";
-import BtnImg from "assets/imgs/landing/start.png";
 
 const contentStyle = {
   maxWidth: "1360px",
@@ -54,20 +53,20 @@ const BMlanding: React.FC<BMlandingProps> = () => {
                 style={{ mixBlendMode: "screen" }}
               >
                 <source
-                  src={require("assets/imgs/landing/video.mp4")}
+                  src={require("assets/imgs/galaxy/Galaxy alpha.mp4")}
                   type="video/mp4"
                 />
               </video>
             </div>
             <div className="md:w-2/3 text-left">
-              <div className="text-52 font-bold tracking-wide mt-[30px]">
-                BMverse™
+              <div className="text-47 font-bold tracking-wide mt-[30px]">
+                BMverse "Beautifull Minds Foundation"
               </div>
-              <div className="text-26 md:text-39 font-bold tracking-standard break-all">
-                The Decentralized Platforms Provider
+              <div className="text-26 md:text-34 font-bold tracking-standard break-all">
+                The decentralized platforms provider
               </div>
-              <div className="text-26 md:text-39 font-bold tracking-standard break-all">
-                Generation ALPHA Prerequisites in Web3
+              <div className="text-26 md:text-34 font-bold tracking-standard break-all">
+                Generation ALPHA Prerequisites in #WEB3
               </div>
               <div className="md:grid grid-cols-3 gap-[50px] mt-[60px]">
                 <div className="rounded-[20px] border-2 border-white p-3 mb-5">
@@ -103,39 +102,41 @@ const BMlanding: React.FC<BMlandingProps> = () => {
                 </div>
               </div>
               <div className="mt-5">
-                <a href={`/${configs.BASE_URL}/#/bmgame`}>
-                  <img
-                    src={BtnImg}
-                    className="float-right mr-[30px]"
-                    alt="startbtn"
-                  />
+                <a
+                  href={`/${configs.BASE_URL}/#/bmgame`}
+                  className="px-4 pt-1 pb-4 float-right mr-[30px] bg-100 text-20 font-semibold"
+                  style={{
+                    backgroundImage: `url(${require("assets/imgs/landing/start.png")}`
+                  }}
+                >
+                  Start of The Journey
                 </a>
               </div>
             </div>
           </div>
           <div className="absolute bottom-[20px]">
-            <a href={`/${configs.BASE_URL}/#/`}>
+            <a href="https://www.linkedin.com/company/bmverse">
               <img
                 src={LinkedinIcon}
                 alt="linkedinicon"
                 className="inline mx-2 w-[45px]"
               />
             </a>
-            <a href={`/${configs.BASE_URL}/#/`}>
+            <a href="https://twitter.com/bmverseio">
               <img
                 src={TwitterIcon}
                 alt="twittericon"
                 className="inline mx-2 w-[45px]"
               />
             </a>
-            <a href={`/${configs.BASE_URL}/#/`}>
+            <a href="https://www.youtube.com/@Quantelium">
               <img
                 src={YoutubeIcon}
                 alt="youtubeicon"
                 className="inline mx-2 w-[45px]"
               />
             </a>
-            <a href={`/${configs.BASE_URL}/#/`}>
+            <a href="https://bmverse.medium.com/">
               <img
                 src={MediumIcon}
                 alt="mediumicon"
