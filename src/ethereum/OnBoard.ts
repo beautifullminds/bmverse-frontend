@@ -3,7 +3,6 @@ import Web3 from "web3";
 import configs from "../configs";
 
 let web3: any;
-declare let window: any;
 
 const wallets = [
   { walletName: "metamask", preferred: true },

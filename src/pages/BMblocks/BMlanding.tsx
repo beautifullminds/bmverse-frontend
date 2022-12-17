@@ -44,7 +44,7 @@ const BMlanding: React.FC<BMlandingProps> = () => {
             md:p-[30px_60px_140px]"
         >
           <div className="md:flex">
-            <div className="md:w-1/3 flex">
+            <div className="md:w-2/5 flex">
               <video
                 className="m-auto rounded-[20px] content-justify"
                 loop
@@ -53,19 +53,19 @@ const BMlanding: React.FC<BMlandingProps> = () => {
                 style={{ mixBlendMode: "screen" }}
               >
                 <source
-                  src={require("assets/imgs/galaxy/Galaxy alpha.mp4")}
-                  type="video/mp4"
+                  src={require("assets/imgs/landing/video.webm")}
+                  type="video/webm"
                 />
               </video>
             </div>
-            <div className="md:w-2/3 text-left">
+            <div className="md:w-3/5 text-left">
               <div className="text-47 font-bold tracking-wide mt-[30px]">
                 BMverse "Beautifull Minds Foundation"
               </div>
-              <div className="text-26 md:text-34 font-bold tracking-standard break-all">
+              <div className="text-26 md:text-32 font-bold tracking-standard break-all">
                 The decentralized platforms provider
               </div>
-              <div className="text-26 md:text-34 font-bold tracking-standard break-all">
+              <div className="text-26 md:text-32 font-bold tracking-standard break-all">
                 Generation ALPHA Prerequisites in #WEB3
               </div>
               <div className="md:grid grid-cols-3 gap-[50px] mt-[60px]">
