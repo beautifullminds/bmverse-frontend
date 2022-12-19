@@ -10,7 +10,9 @@ const configs = {
   BLOCK_EXPLORER: "https://etherscan.io",
   WALLET_APP_NAME: "BMverse",
 
-  BASE_URL: "bmverse-frontend"
+  BASE_URL: "bmverse-frontend",
+  MEDIUM_URL:
+    "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@bmverse"
 };
 
 export default configs;

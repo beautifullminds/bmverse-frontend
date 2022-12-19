@@ -1,7 +1,16 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
+import configs from "configs";
 
 interface BMblogProps {
   scroll: number;
+}
+
+interface Iblog {
+  title: string;
+  description: string;
+  thumbnail: string;
+  link: string;
 }
 
 const BMblogStyle = {
@@ -11,9 +20,10 @@ const BMblogStyle = {
 };
 
 const blogItemStyle = {
+  display: "block",
   borderRadius: "15px",
-  background: "#fff",
-  minHeight: "400px"
+  minHeight: "400px",
+  padding: "20px"
 };
 
 const scrollHeightArr: { path: string; height: number }[] = [
@@ -28,6 +38,7 @@ const scrollHeightArr: { path: string; height: number }[] = [
 
 const BMblog: React.FC<BMblogProps> = ({ scroll }) => {
   const [sh, setSh] = useState(0);
+  const [blogs, setBlogs] = useState<Iblog[]>([]);
 
   useEffect(() => {
     const pathname = window.location.href;
@@ -37,6 +48,26 @@ const BMblog: React.FC<BMblogProps> = ({ scroll }) => {
     if (fH) {
       setSh(fH.height);
     }
+
+    axios
+      .get(configs.MEDIUM_URL)
+      .then((data: any) => {
+        if (data.data.items && data.data.items.length > 0) {
+          let arr: Iblog[] = [];
+          for (let i = 0; i < data.data.items.length; i++) {
+            arr.push({
+              title: data.data.items[i].title,
+              description: data.data.items[i].description,
+              thumbnail: data.data.items[i].thumbnail,
+              link: data.data.items[i].link
+            });
+          }
+          setBlogs(arr);
+        }
+      })
+      .catch((e: any) => {
+        console.log(e);
+      });
   }, []);
 
   return (
@@ -49,10 +80,31 @@ const BMblog: React.FC<BMblogProps> = ({ scroll }) => {
         BM Blog
       </h3>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
-        <div style={blogItemStyle}></div>
-        <div style={blogItemStyle}></div>
-        <div style={blogItemStyle}></div>
-        <div style={blogItemStyle}></div>
+        {blogs.map((item: Iblog, index: number) => (
+          <a
+            style={blogItemStyle}
+            className="bg-dark"
+            target="_blank"
+            href={item.link}
+            key={index}
+          >
+            <div className="h-[100px] rounded-t-[13px] text-center p-2">
+              <img src={item.thumbnail} className="h-full inline" alt="blog" />
+            </div>
+            <div className="min-h-[100px] flex justify-center items-center">
+              <h3 className="pt-4 text-28 font-semibold">{item.title}</h3>
+            </div>
+
+            {
+              <div
+                className="text-16 mt-3 max-h-[200px] break-all overflow-hidden"
+                dangerouslySetInnerHTML={{
+                  __html: item.description
+                }}
+              />
+            }
+          </a>
+        ))}
       </div>
     </div>
   );
