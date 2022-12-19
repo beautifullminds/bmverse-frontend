@@ -79,12 +79,13 @@ const BMblog: React.FC<BMblogProps> = ({ scroll }) => {
       >
         BM Blog
       </h3>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
         {blogs.map((item: Iblog, index: number) => (
           <a
             style={blogItemStyle}
             className="bg-dark"
             target="_blank"
+            rel="noreferrer"
             href={item.link}
             key={index}
           >
