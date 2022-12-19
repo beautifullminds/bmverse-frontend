@@ -30,9 +30,9 @@ const BMblog: React.FC<BMblogProps> = ({ scroll }) => {
   const [sh, setSh] = useState(0);
 
   useEffect(() => {
-    const pathname = window.location.pathname;
-    const fH = scrollHeightArr.find(
-      (item: { path: string; height: number }) => item.path === pathname
+    const pathname = window.location.href;
+    const fH = scrollHeightArr.find((item: { path: string; height: number }) =>
+      pathname.includes(item.path)
     );
     if (fH) {
       setSh(fH.height);
