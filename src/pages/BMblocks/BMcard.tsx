@@ -4,6 +4,7 @@ import Menu from "components/Menu";
 import BMblog from "components/blocks/BMblog";
 import Collaborate from "components/blocks/Collaborate";
 import LandingHeader from "components/blocks/LandingHeader";
+import Footer from "components/Footer";
 
 interface BMcardProps {}
 
@@ -116,6 +117,7 @@ const BMcard: React.FC<BMcardProps> = () => {
         <div className="com-content">
           <Collaborate scroll={scrollH} />
         </div>
+        <Footer />
       </div>
     </Layout>
   );

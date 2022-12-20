@@ -4,6 +4,7 @@ import Menu from "components/Menu";
 import BMblog from "components/blocks/BMblog";
 import Collaborate from "components/blocks/Collaborate";
 import LandingHeader from "components/blocks/LandingHeader";
+import Footer from "components/Footer";
 
 import SnakImg from "assets/imgs/jewel/Snak.png";
 import BoxImg from "assets/imgs/jewel/box.png";
@@ -149,6 +150,7 @@ const BMjewel: React.FC<BMjewelProps> = () => {
         <div className="com-content">
           <Collaborate scroll={scrollH} />
         </div>
+        <Footer />
       </div>
     </Layout>
   );

@@ -1,0 +1,49 @@
+.sidebar {
+  width: 100vh;
+  height: 60px;
+  color: white;
+  background-color: transparent;
+  transform: rotate(270deg);
+  transform: rotate(270deg);
+  transform-origin: top right;
+  position: fixed;
+  top: 0px;
+  /* left: 0%; */
+  right: 100%;
+  /* bottom: 0px; */
+  text-align: center;
+  opacity: 0;
+  z-index: 10;
+  transition: all ease-in-out 1.2s;
+
+  .sideslide_div {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 0px; */
+    padding-top: 0.5rem;
+    padding-bottom: 0rem;
+  }
+  .sideslide_div h1 {
+    font-size: 1.6rem;
+    margin-right: 0.5rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 600;
+  }
+  .sideslide_div a {
+    margin-left: 0.3rem;
+  }
+  .sideslide_div a img {
+    width: 60%;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}

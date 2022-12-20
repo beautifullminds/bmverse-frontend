@@ -4,6 +4,7 @@ import Menu from "components/Menu";
 import BMblog from "components/blocks/BMblog";
 import Collaborate from "components/blocks/Collaborate";
 import LandingHeader from "components/blocks/LandingHeader";
+import Footer from "components/Footer";
 
 import Galaxy1Img from "assets/imgs/learn/galaxy1.png";
 import GadeImg from "assets/imgs/mega/gade.png";
@@ -327,6 +328,7 @@ const BMlearn: React.FC<BMlearnProps> = () => {
         <div className="com-content">
           <Collaborate scroll={scrollH} />
         </div>
+        <Footer />
       </div>
     </Layout>
   );

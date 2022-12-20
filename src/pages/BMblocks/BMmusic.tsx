@@ -4,6 +4,7 @@ import Menu from "components/Menu";
 import BMblog from "components/blocks/BMblog";
 import Collaborate from "components/blocks/Collaborate";
 import LandingHeader from "components/blocks/LandingHeader";
+import Footer from "components/Footer";
 
 import BgImg from "../../assets/imgs/music/bg.png";
 import Galary1Img from "../../assets/imgs/music/galary1.png";
@@ -88,6 +89,7 @@ const BMmusic: React.FC<BMmusicProps> = () => {
         <div className="com-content">
           <Collaborate scroll={scrollH} />
         </div>
+        <Footer />
       </div>
     </Layout>
   );

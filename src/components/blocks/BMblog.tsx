@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import configs from "configs";
+import DOMPurify from "dompurify";
 
 interface BMblogProps {
   scroll: number;
@@ -22,7 +23,7 @@ const BMblogStyle = {
 const blogItemStyle = {
   display: "block",
   borderRadius: "15px",
-  minHeight: "400px",
+  minHeight: "300px",
   padding: "20px"
 };
 
@@ -79,7 +80,7 @@ const BMblog: React.FC<BMblogProps> = ({ scroll }) => {
       >
         BM Blog
       </h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[50px]">
         {blogs.map((item: Iblog, index: number) => (
           <a
             style={blogItemStyle}
@@ -98,9 +99,11 @@ const BMblog: React.FC<BMblogProps> = ({ scroll }) => {
 
             {
               <div
-                className="text-16 mt-3 max-h-[200px] break-all overflow-hidden"
+                className="text-16 mt-3 max-h-[200px] break-all overflow-hidden limited-text text-left"
                 dangerouslySetInnerHTML={{
-                  __html: item.description
+                  __html: DOMPurify.sanitize(item.description, {
+                    ALLOWED_TAGS: ["p"]
+                  })
                 }}
               />
             }

@@ -1,0 +1,215 @@
+.footer {
+  height: auto;
+  background-color: transparent;
+  color: rgb(182, 172, 172);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Rajdhani", sans-serif;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  margin-top: 5rem;
+  letter-spacing: 1px;
+  width: 100%;
+  font-size: 0.9rem;
+
+  .footer_btn {
+    width: 91%;
+    padding: 1.3rem 0;
+    margin: 2rem auto;
+  }
+
+  button {
+    padding: 1.5rem 0.5rem;
+    text-align: center;
+    width: 20%;
+    background-color: transparent;
+    color: rgb(153, 149, 149);
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: 3px solid rgba(204, 0, 255, 0.381);
+    letter-spacing: 3px;
+  }
+
+  .bottom_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(
+      120deg,
+      #1b121dda 0,
+      #120f2fed 50%,
+      #1b121dd8 100%
+    );
+    padding: 1rem 1.5rem;
+  }
+
+  .footer_heading {
+    width: 90%;
+    text-align: center;
+    font-size: 3rem;
+    margin: 0 auto;
+    font-weight: 400;
+  }
+
+  .footer_heading h1 {
+    font-weight: 400;
+    text-transform: uppercase;
+    color: rgb(229, 223, 223);
+  }
+
+  form {
+    width: 96%;
+    margin: 0 auto;
+    /* padding: 0rem 1.5rem; */
+  }
+
+  .input_div {
+    width: 100%;
+    display: flex;
+    margin: 3rem auto;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .input_div input {
+    width: 40%;
+    padding: 1.5rem 2rem;
+    font-size: 1rem;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.344);
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.712);
+  }
+
+  .text_area_div {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .text_area_div textarea {
+    width: 90%;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.67);
+    padding: 1.5rem 2rem;
+    font-size: 1.3rem;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.377);
+  }
+
+  .footer_div_1 {
+    font-weight: 600;
+  }
+
+  .footer_div_2 {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footer_div_2 a {
+    margin-right: 1.7rem;
+    color: rgb(184, 177, 177);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all ease-in 0.2s;
+  }
+  .footer_div_2 a:hover {
+    color: rgba(176, 109, 195, 0.933);
+  }
+
+  .footer_bmverse a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .input_div input:focus {
+    outline: none !important;
+    border-color: rgba(255, 255, 255, 0.579);
+    /* box-shadow: 0 0 10px #719ECE; */
+    /* box-shadow: 0 0 10px #719ECE; */
+    width: 40.5%;
+  }
+
+  .text_area_div textarea:focus {
+    outline: none !important;
+    border-color: rgba(255, 255, 255, 0.579);
+  }
+
+  @media screen and (max-width: 1020px) {
+    .footer_heading {
+      font-size: 2rem;
+    }
+
+    .footer_btn {
+      margin: 1.4rem auto;
+    }
+    .footer button {
+      padding: 1.2rem 0.5rem;
+      width: 30%;
+      font-size: 1.1rem;
+    }
+
+    .footer_div_1 {
+      font-size: 0.7rem;
+    }
+
+    .footer_div_2 a {
+      font-size: 0.7rem;
+    }
+
+    .footer textarea {
+      height: 250px;
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    .input_div {
+      flex-direction: column;
+      margin: 0 auto;
+    }
+
+    .input_div input {
+      width: 70%;
+      height: 7px;
+      margin: 0 auto;
+      margin-bottom: 2.5rem;
+    }
+
+    .footer textarea {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .footer_btn {
+      padding: 0px;
+      width: 50%;
+    }
+    .footer_btn button {
+      width: 100%;
+    }
+
+    .bottom_footer {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .footer_div_1 {
+      width: 80%;
+    }
+    .footer_div_2 {
+      width: 80%;
+      margin-top: 0.5rem;
+      justify-content: space-between;
+    }
+
+    .footer_div_2 a {
+      margin: 0%;
+      font-size: 0.8rem;
+    }
+  }
+}

@@ -4,6 +4,7 @@ import Menu from "components/Menu";
 import BMblog from "components/blocks/BMblog";
 import Collaborate from "components/blocks/Collaborate";
 import LandingHeader from "components/blocks/LandingHeader";
+import Footer from "components/Footer";
 
 import QueenImg from "assets/imgs/mega/queen.png";
 import MultiQueenImg from "assets/imgs/mega/multipleQueen.png";
@@ -109,11 +110,11 @@ const BMmega: React.FC<BMmegaProps> = () => {
             </div>
             <div className="flex flex-wrap mt-[80px]">
               <div
-                className={`text-left w-full md:w-[40%] lg:left-[-1200px] relative ${
+                className={`flex items-center text-left w-full md:w-[40%] lg:left-[-1200px] relative ${
                   scrollH >= 750 ? "transition-origin" : ""
                 }`}
               >
-                <video className="m-auto" loop autoPlay muted>
+                <video className="m-auto mix-blend-screen" loop autoPlay muted>
                   <source
                     src={require("assets/imgs/mega/girl1.mp4")}
                     type="video/mp4"
@@ -250,11 +251,7 @@ const BMmega: React.FC<BMmegaProps> = () => {
                 </div>
               </div>
             </div>
-            <div
-              className={`lg:top-[1200px] relative ${
-                scrollH >= 3400 ? "transition-origin" : ""
-              }`}
-            >
+            <div>
               <img src={GadeImg} alt="gade" />
             </div>
 
@@ -291,6 +288,7 @@ const BMmega: React.FC<BMmegaProps> = () => {
         <div className="com-content">
           <Collaborate scroll={scrollH} />
         </div>
+        <Footer />
       </div>
     </Layout>
   );
