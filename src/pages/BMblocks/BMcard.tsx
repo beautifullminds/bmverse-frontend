@@ -29,7 +29,12 @@ const BMcard: React.FC<BMcardProps> = () => {
           <div className="content text-center">
             <h2 className="text-46 md:text-64 font-bold">BM CARD</h2>
             <div>
-              <video className="m-auto mt-3 md:mt-0" loop autoPlay muted>
+              <video
+                className="m-auto mt-3 md:mt-0 mix-blend-screen"
+                loop
+                autoPlay
+                muted
+              >
                 <source
                   src={require("assets/imgs/card/video1.webm")}
                   type="video/webm"
@@ -49,7 +54,12 @@ const BMcard: React.FC<BMcardProps> = () => {
                   scrollH >= 320 ? "transition-origin" : ""
                 }`}
               >
-                <video className="m-auto mt-3 md:mt-0" loop autoPlay muted>
+                <video
+                  className="m-auto mt-3 md:mt-0 mix-blend-screen"
+                  loop
+                  autoPlay
+                  muted
+                >
                   <source
                     src={require("assets/imgs/card/video2.webm")}
                     type="video/webm"
@@ -61,7 +71,12 @@ const BMcard: React.FC<BMcardProps> = () => {
                   scrollH >= 320 ? "transition-origin" : ""
                 }`}
               >
-                <video className="m-auto mt-3 md:mt-0" loop autoPlay muted>
+                <video
+                  className="m-auto mt-3 md:mt-0 mix-blend-screen"
+                  loop
+                  autoPlay
+                  muted
+                >
                   <source
                     src={require("assets/imgs/card/video3.webm")}
                     type="video/webm"
@@ -89,7 +104,12 @@ const BMcard: React.FC<BMcardProps> = () => {
                   scrollH >= 930 ? "transition-origin" : ""
                 }`}
               >
-                <video className="m-auto mt-3 md:mt-0" loop autoPlay muted>
+                <video
+                  className="m-auto mt-3 md:mt-0 mix-blend-screen"
+                  loop
+                  autoPlay
+                  muted
+                >
                   <source
                     src={require("assets/imgs/card/video4.webm")}
                     type="video/webm"
@@ -101,7 +121,12 @@ const BMcard: React.FC<BMcardProps> = () => {
                   scrollH >= 930 ? "transition-origin" : ""
                 }`}
               >
-                <video className="m-auto mt-3 md:mt-0" loop autoPlay muted>
+                <video
+                  className="m-auto mt-3 md:mt-0 mix-blend-screen"
+                  loop
+                  autoPlay
+                  muted
+                >
                   <source
                     src={require("assets/imgs/card/video5.webm")}
                     type="video/webm"

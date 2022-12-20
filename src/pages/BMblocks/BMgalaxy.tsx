@@ -119,7 +119,7 @@ const BMgalaxy: React.FC<BMgalaxyProps> = () => {
             >
               BM Galaxy is a unique masterpiece in combining art and technology.
             </div>
-            <video className="m-auto" loop autoPlay muted>
+            <video className="m-auto" loop autoPlay muted mix-blend-screen>
               <source
                 src={require("assets/imgs/galaxy/sunVideo.mp4")}
                 type="video/mp4"
@@ -235,7 +235,7 @@ const BMgalaxy: React.FC<BMgalaxyProps> = () => {
               </div>
             </div>
             <div className="mt-3">
-              <video className="m-auto" loop autoPlay muted>
+              <video className="m-auto mix-blend-screen" loop autoPlay muted>
                 <source
                   src={require("assets/imgs/galaxy/G5X_VP9.webm")}
                   type="video/webm"
