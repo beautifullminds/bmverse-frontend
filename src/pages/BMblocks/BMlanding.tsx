@@ -115,28 +115,44 @@ const BMlanding: React.FC<BMlandingProps> = () => {
             </div>
           </div>
           <div className="absolute bottom-[20px]">
-            <a href="https://www.linkedin.com/company/bmverse">
+            <a
+              href="https://www.linkedin.com/company/bmverse"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 src={LinkedinIcon}
                 alt="linkedinicon"
                 className="inline mx-2 w-[45px]"
               />
             </a>
-            <a href="https://twitter.com/bmverseio">
+            <a
+              href="https://twitter.com/bmverseio"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 src={TwitterIcon}
                 alt="twittericon"
                 className="inline mx-2 w-[45px]"
               />
             </a>
-            <a href="https://www.youtube.com/@Quantelium">
+            <a
+              href="https://www.youtube.com/@Quantelium"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 src={YoutubeIcon}
                 alt="youtubeicon"
                 className="inline mx-2 w-[45px]"
               />
             </a>
-            <a href="https://bmverse.medium.com/">
+            <a
+              href="https://bmverse.medium.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 src={MediumIcon}
                 alt="mediumicon"

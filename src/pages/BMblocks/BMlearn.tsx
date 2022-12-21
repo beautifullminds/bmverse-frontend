@@ -47,8 +47,6 @@ const BMlearn: React.FC<BMlearnProps> = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  console.log(scrollH);
-
   return (
     <Layout ref={layoutView} scroll={scrollH}>
       <div className="landing-container">

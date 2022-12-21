@@ -31,7 +31,7 @@ const Header: React.FC<HeaderProps> = ({ scrollH }) => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    if (!walletAddress) {
+    if (walletAddress) {
       dispatch(connectWallet());
     }
   }, [dispatch, walletAddress]);

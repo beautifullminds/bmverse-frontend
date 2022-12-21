@@ -255,8 +255,11 @@ const BMmega: React.FC<BMmegaProps> = () => {
               <img src={GadeImg} alt="gade" />
             </div>
 
-            <div className="text-left text-16 font-semibold" style={bgStyle}>
-              <p className="max-w-[800px] pb-4">
+            <div
+              className="max-w-[800px] m-auto text-left text-16 font-semibold"
+              style={bgStyle}
+            >
+              <p className="pb-4">
                 Activating the third ability of each character requires its
                 owner’s taste and expertise. The third ability is activated only
                 if the character is developed by its owner. This development

@@ -26,21 +26,21 @@ const BMcard: React.FC<BMcardProps> = () => {
         <LandingHeader />
         <Menu />
         <div className="bm-content">
-          <div className="content text-center">
+          <div className="content text-center" style={{ overflow: "unset" }}>
             <h2 className="text-46 md:text-64 font-bold">BM CARD</h2>
-            <div>
-              <video
-                className="m-auto mt-3 md:mt-0 mix-blend-screen"
-                loop
-                autoPlay
-                muted
-              >
-                <source
-                  src={require("assets/imgs/card/video1.webm")}
-                  type="video/webm"
-                />
-              </video>
-            </div>
+
+            <video
+              className="m-auto mt-3 md:mt-0 mix-blend-screen"
+              loop
+              autoPlay
+              muted
+            >
+              <source
+                src={require("assets/imgs/card/video1.webm")}
+                type="video/webm"
+              />
+            </video>
+
             <div className="uppercase text-32 font-semibold [word-spacing: 10px] text-left my-[60px] break-all [letter-spacing: 1px]">
               <span className="text-42 font-bold">A</span>ll the characters who
               live in the <span className="text-42 font-bold">M</span>etaverse
@@ -49,40 +49,29 @@ const BMcard: React.FC<BMcardProps> = () => {
               <span className="text-42 font-bold">BM</span> cards.
             </div>
             <div className="md:grid grid-cols-2 gap-1">
-              <div
-                className={`lg:-left-[1000px] relative ${
-                  scrollH >= 320 ? "transition-origin" : ""
-                }`}
+              <video
+                className="m-auto mt-3 md:mt-0 mix-blend-screen"
+                loop
+                autoPlay
+                muted
               >
-                <video
-                  className="m-auto mt-3 md:mt-0 mix-blend-screen"
-                  loop
-                  autoPlay
-                  muted
-                >
-                  <source
-                    src={require("assets/imgs/card/video2.webm")}
-                    type="video/webm"
-                  />
-                </video>
-              </div>
-              <div
-                className={`lg:left-[1000px] relative ${
-                  scrollH >= 320 ? "transition-origin" : ""
-                }`}
+                <source
+                  src={require("assets/imgs/card/video2.webm")}
+                  type="video/webm"
+                />
+              </video>
+
+              <video
+                className="m-auto mt-3 md:mt-0 mix-blend-screen"
+                loop
+                autoPlay
+                muted
               >
-                <video
-                  className="m-auto mt-3 md:mt-0 mix-blend-screen"
-                  loop
-                  autoPlay
-                  muted
-                >
-                  <source
-                    src={require("assets/imgs/card/video3.webm")}
-                    type="video/webm"
-                  />
-                </video>
-              </div>
+                <source
+                  src={require("assets/imgs/card/video3.webm")}
+                  type="video/webm"
+                />
+              </video>
             </div>
             <div className="uppercase text-28 [word-spacing: 10px] text-left my-[60px] break-all">
               every character in <span className="text-36">M</span>ega
@@ -99,40 +88,29 @@ const BMcard: React.FC<BMcardProps> = () => {
               <span className="text-36">BMV</span>erse.
             </div>
             <div className="md:grid grid-cols-2 gap-1">
-              <div
-                className={`lg:-left-[1000px] relative ${
-                  scrollH >= 930 ? "transition-origin" : ""
-                }`}
+              <video
+                className="m-auto mt-3 md:mt-0 mix-blend-screen"
+                loop
+                autoPlay
+                muted
               >
-                <video
-                  className="m-auto mt-3 md:mt-0 mix-blend-screen"
-                  loop
-                  autoPlay
-                  muted
-                >
-                  <source
-                    src={require("assets/imgs/card/video4.webm")}
-                    type="video/webm"
-                  />
-                </video>
-              </div>
-              <div
-                className={`lg:left-[1000px] relative ${
-                  scrollH >= 930 ? "transition-origin" : ""
-                }`}
+                <source
+                  src={require("assets/imgs/card/video4.webm")}
+                  type="video/webm"
+                />
+              </video>
+
+              <video
+                className="m-auto mt-3 md:mt-0 mix-blend-screen"
+                loop
+                autoPlay
+                muted
               >
-                <video
-                  className="m-auto mt-3 md:mt-0 mix-blend-screen"
-                  loop
-                  autoPlay
-                  muted
-                >
-                  <source
-                    src={require("assets/imgs/card/video5.webm")}
-                    type="video/webm"
-                  />
-                </video>
-              </div>
+                <source
+                  src={require("assets/imgs/card/video5.webm")}
+                  type="video/webm"
+                />
+              </video>
             </div>
           </div>
         </div>
