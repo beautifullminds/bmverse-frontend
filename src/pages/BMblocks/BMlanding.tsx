@@ -30,7 +30,7 @@ const BMlanding: React.FC<BMlandingProps> = () => {
 
   return (
     <Layout ref={layoutView} scroll={scrollH}>
-      <div className="px-5 bg-dark min-h-[100vh] py-[50px]">
+      <div className="px-5 bg-dark min-h-[100vh] pb-[50px] pt-[120px]">
         <div
           style={contentStyle}
           className="

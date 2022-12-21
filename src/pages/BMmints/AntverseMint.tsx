@@ -81,7 +81,10 @@ const AntverseMint: React.FC<AntverseMintProps> = () => {
 
   return (
     <Layout ref={layoutView} scroll={scrollH}>
-      <div className="text-center overflow-hidden" style={contentStyle}>
+      <div
+        className="text-center overflow-hidden pt-[93px] md:pt-[62px]"
+        style={contentStyle}
+      >
         <h1 className="text-82 md:text-96">MINT ZONE</h1>
         <p className="text-47 md:text-55 font-semibold">
           ANTverse Series From BM Mega

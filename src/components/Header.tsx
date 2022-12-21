@@ -52,11 +52,7 @@ const Header: React.FC<HeaderProps> = ({ scrollH }) => {
 
   return (
     <div className="header-container relative z-50">
-      <div
-        className={`flex flex-wrap bg-black w-full px-4 ${
-          scrollH > 0 ? "fixed" : "relative"
-        }`}
-      >
+      <div className="flex flex-wrap bg-black w-full px-4 fixed">
         <div className="w-auto md:w-1/3">
           <img src={Logo} alt="logo" width={54} />
         </div>
