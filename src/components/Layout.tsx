@@ -17,7 +17,7 @@ export default class Layout extends PureComponent<layoutProps> {
 
     return (
       <div id="layout" className="layout">
-        <Header scrollH={this.props.scroll} />
+        <Header />
         <Sidebar />
         <div className="main-container relative">
           <div className={className}>{this.props.children}</div>

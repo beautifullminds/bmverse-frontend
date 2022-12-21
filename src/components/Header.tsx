@@ -7,13 +7,12 @@ import {
 import { useAppDispatch, useAppSelector } from "store/hooks";
 import { onboard } from "ethereum/OnBoard";
 import configs from "configs";
+import Storage from "store/storage";
 
 import Logo from "assets/imgs/logo.png";
 import LogoGod from "assets/imgs/logo-god.png";
 
-interface HeaderProps {
-  scrollH: number;
-}
+interface HeaderProps {}
 
 const buttonStyle = {
   color: "#fff",
@@ -25,16 +24,17 @@ const buttonStyle = {
   fontWeight: 500
 };
 
-const Header: React.FC<HeaderProps> = ({ scrollH }) => {
+const Header: React.FC<HeaderProps> = () => {
   const walletAddress = useAppSelector(getWalletAddress);
   const balance = useAppSelector(getWalletBalance);
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    if (walletAddress) {
+    let cachedWallet = Storage.get("SELECTED_WALLET");
+    if (cachedWallet) {
       dispatch(connectWallet());
     }
-  }, [dispatch, walletAddress]);
+  }, [dispatch]);
 
   const getNutAddress = () => {
     const repTxt = walletAddress.substr(5, 33);
