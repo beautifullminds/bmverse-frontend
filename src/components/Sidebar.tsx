@@ -10,16 +10,28 @@ const Sidebar: React.FC<SidebarProps> = () => {
     <section className="sidebar">
       <div className="sideslide_div">
         <h1>Follow Us On:</h1>
-        <a href="https://twitter.com/bmverseio">
+        <a
+          href="https://twitter.com/bmverseio"
+          target="_blank"
+          rel="noreferrer"
+        >
           <img src={TwitterIcon} alt="twitter" />
         </a>
-        <a href="https://www.linkedin.com/company/bmverse">
+        <a
+          href="https://www.linkedin.com/company/bmverse"
+          target="_blank"
+          rel="noreferrer"
+        >
           <img src={LinkedinIcon} alt="linkedin" />
         </a>
-        <a href="https://www.youtube.com/@Quantelium">
+        <a
+          href="https://www.youtube.com/@Quantelium"
+          target="_blank"
+          rel="noreferrer"
+        >
           <img src={YoutubeIcon} alt="youtube" />
         </a>
-        <a href="https://bmverse.medium.com/">
+        <a href="https://bmverse.medium.com/" target="_blank" rel="noreferrer">
           <img src={MediumIcon} alt="medium" />
         </a>
       </div>
