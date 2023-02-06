@@ -103,7 +103,7 @@ const BMlanding: React.FC<BMlandingProps> = () => {
               </div>
               <div className="mt-5">
                 <a
-                  href={`/${configs.BASE_URL}/#/bmgame`}
+                  href={`/#/bmgame`}
                   className="px-4 pt-1 pb-4 float-right mr-[30px] bg-100 text-20 font-semibold"
                   style={{
                     backgroundImage: `url(${require("assets/imgs/landing/start.png")}`

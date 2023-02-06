@@ -58,16 +58,16 @@ const Footer: React.FC<FooterProps> = () => {
           <h3>
             Copyright 2022 — Designed and Developed by{" "}
             <span className="footer_bmverse">
-              <a href={`/${configs.BASE_URL}`}>BMverse</a>
+              <a href="">BMverse</a>
             </span>
           </h3>
         </div>
         <div className="footer_div_2">
           <a href="https://github.com/bmverse">Github</a>
-          <a href={`/${configs.BASE_URL}`}>Discord Commuinity </a>
-          <a href={`/${configs.BASE_URL}`}>Site map</a>
-          <a href={`/${configs.BASE_URL}`}>Collab</a>
-          <a href={`/${configs.BASE_URL}`}>Privacy Policy</a>
+          <a href="">Discord Commuinity </a>
+          <a href="">Site map</a>
+          <a href="">Collab</a>
+          <a href="">Privacy Policy</a>
         </div>
       </div>
     </section>

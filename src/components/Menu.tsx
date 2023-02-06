@@ -31,7 +31,7 @@ const Menu: React.FC<MenuProps> = () => {
           <div className="text-center py-1" key={index} style={menuItemStyle}>
             <a
               className="font-semibold text-14 md:text-22 text-white"
-              href={`/${configs.BASE_URL}/#/${item.url}`}
+              href={`/#/${item.url}`}
             >
               {item.label}
             </a>
