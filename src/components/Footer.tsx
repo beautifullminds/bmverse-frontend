@@ -63,7 +63,7 @@ const Footer: React.FC<FooterProps> = () => {
           </h3>
         </div>
         <div className="footer_div_2">
-          <a href="https://github.com/bmverse">Github</a>
+          <a href="https://github.com/beautifullminds">Github</a>
           <a href="">Discord Commuinity </a>
           <a href="">Site map</a>
           <a href="">Collab</a>
