@@ -1,4 +1,3 @@
-import configs from "configs";
 import line from "assets/imgs/galaxy/Line.png";
 
 interface FooterProps {}
@@ -56,18 +55,18 @@ const Footer: React.FC<FooterProps> = () => {
       <div className="bottom_footer">
         <div className="footer_div_1">
           <h3>
-            Copyright 2022 — Designed and Developed by{" "}
+            Copyright {new Date().getFullYear()} — Designed and Developed by{" "}
             <span className="footer_bmverse">
-              <a href="">BMverse</a>
+              <a href="/">BMverse</a>
             </span>
           </h3>
         </div>
         <div className="footer_div_2">
           <a href="https://github.com/beautifullminds">Github</a>
-          <a href="">Discord Commuinity </a>
-          <a href="">Site map</a>
-          <a href="">Collab</a>
-          <a href="">Privacy Policy</a>
+          <a href="/">Discord Commuinity </a>
+          <a href="/">Site map</a>
+          <a href="/">Collab</a>
+          <a href="/">Privacy Policy</a>
         </div>
       </div>
     </section>
