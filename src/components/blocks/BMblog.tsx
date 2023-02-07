@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 import axios from "axios";
 import configs from "configs";
 import DOMPurify from "dompurify";
 
-interface BMblogProps {
-  scroll: number;
-}
+interface BMblogProps {}
 
 interface Iblog {
   title: string;
@@ -27,29 +26,10 @@ const blogItemStyle = {
   padding: "20px"
 };
 
-const scrollHeightArr: { path: string; height: number }[] = [
-  { path: "/bmgame", height: 1800 },
-  { path: "/bmgalaxy", height: 4500 },
-  { path: "/bmcard", height: 1290 },
-  { path: "/bmmusic", height: 1200 },
-  { path: "/bmmega", height: 4600 },
-  { path: "/bmjewel", height: 2700 },
-  { path: "/bmlearn", height: 3800 }
-];
-
-const BMblog: React.FC<BMblogProps> = ({ scroll }) => {
-  const [sh, setSh] = useState(0);
+const BMblog: React.FC<BMblogProps> = () => {
   const [blogs, setBlogs] = useState<Iblog[]>([]);
 
   useEffect(() => {
-    const pathname = window.location.href;
-    const fH = scrollHeightArr.find((item: { path: string; height: number }) =>
-      pathname.includes(item.path)
-    );
-    if (fH) {
-      setSh(fH.height);
-    }
-
     axios
       .get(configs.MEDIUM_URL)
       .then((data: any) => {
@@ -73,43 +53,45 @@ const BMblog: React.FC<BMblogProps> = ({ scroll }) => {
 
   return (
     <div style={BMblogStyle}>
-      <h3
-        className={`text-73 font-bold mb-5 lg:left-[-1000px] relative ${
-          sh > 0 && scroll > sh ? "transition-origin" : ""
-        }`}
-      >
-        BM Blog
-      </h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[50px]">
-        {blogs.map((item: Iblog, index: number) => (
-          <a
-            style={blogItemStyle}
-            className="bg-dark"
-            target="_blank"
-            rel="noreferrer"
-            href={item.link}
-            key={index}
-          >
-            <div className="h-[100px] rounded-t-[13px] text-center p-2">
-              <img src={item.thumbnail} className="h-full inline" alt="blog" />
-            </div>
-            <div className="min-h-[100px] flex justify-center items-center">
-              <h3 className="pt-4 text-28 font-semibold">{item.title}</h3>
-            </div>
+      <AnimationOnScroll animateIn="bounceInLeft">
+        <h3 className="text-73 font-bold mb-5">BM Blog</h3>
+      </AnimationOnScroll>
+      <AnimationOnScroll animateIn="fadeIn">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[50px]">
+          {blogs.map((item: Iblog, index: number) => (
+            <a
+              style={blogItemStyle}
+              className="bg-dark"
+              target="_blank"
+              rel="noreferrer"
+              href={item.link}
+              key={index}
+            >
+              <div className="h-[100px] rounded-t-[13px] text-center p-2">
+                <img
+                  src={item.thumbnail}
+                  className="h-full inline"
+                  alt="blog"
+                />
+              </div>
+              <div className="min-h-[100px] flex justify-center items-center">
+                <h3 className="pt-4 text-28 font-semibold">{item.title}</h3>
+              </div>
 
-            {
-              <div
-                className="text-16 mt-3 max-h-[200px] break-all overflow-hidden limited-text text-left"
-                dangerouslySetInnerHTML={{
-                  __html: DOMPurify.sanitize(item.description, {
-                    ALLOWED_TAGS: ["p"]
-                  })
-                }}
-              />
-            }
-          </a>
-        ))}
-      </div>
+              {
+                <div
+                  className="text-16 mt-3 max-h-[200px] break-all overflow-hidden limited-text text-left"
+                  dangerouslySetInnerHTML={{
+                    __html: DOMPurify.sanitize(item.description, {
+                      ALLOWED_TAGS: ["p"]
+                    })
+                  }}
+                />
+              }
+            </a>
+          ))}
+        </div>
+      </AnimationOnScroll>
     </div>
   );
 };

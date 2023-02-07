@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef } from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import Layout from "components/Layout";
 import Menu from "components/Menu";
@@ -38,15 +38,6 @@ const bg3Style = {
 
 const BMgalaxy: React.FC<BMgalaxyProps> = () => {
   const layoutView = useRef(null);
-  const [scrollH, setScrollH] = useState(-1);
-
-  useEffect(() => {
-    setScrollH(0);
-    const onScroll = () => setScrollH(window.pageYOffset);
-    window.removeEventListener("scroll", onScroll);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
     <Layout ref={layoutView}>
@@ -268,10 +259,10 @@ const BMgalaxy: React.FC<BMgalaxyProps> = () => {
           </div>
         </div>
         <div className="com-content">
-          <BMblog scroll={scrollH} />
+          <BMblog />
         </div>
         <div className="com-content">
-          <Collaborate scroll={scrollH} />
+          <Collaborate />
         </div>
         <Footer />
       </div>

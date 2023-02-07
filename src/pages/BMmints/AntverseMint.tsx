@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 import Layout from "components/Layout";
 
 import TmImg from "assets/imgs/antversemint/Tm.png";
@@ -89,11 +90,7 @@ const AntverseMint: React.FC<AntverseMintProps> = () => {
         <p className="text-47 md:text-55 font-semibold">
           ANTverse Series From BM Mega
         </p>
-        <div
-          className={`md:grid grid-cols-3 relative md:min-h-[250px] xl:min-h-[500px] lg:left-[3000px] relative ${
-            scrollH >= 0 ? "transition-origin" : ""
-          }`}
-        >
+        <div className="md:grid grid-cols-3 relative md:min-h-[250px] xl:min-h-[500px]">
           <div className="relative">
             <img
               className="mt-4 xl:min-w-[660px] xl:absolute bottom-0"
@@ -119,100 +116,100 @@ const AntverseMint: React.FC<AntverseMintProps> = () => {
         <div className="px-[20px] md:px-[40px] xl:px-[150px]">
           <div className="overflow-y-auto overflow-x-hidden p-5">
             <div className="w-80 max-w-[640px] border-y border-t-0 border-gray text-left m-auto lg:m-1 text-56 font-semibold">
-              EPIC Assets
+              <AnimationOnScroll animateIn="bounceInLeft">
+                EPIC Assets
+              </AnimationOnScroll>
             </div>
             <div
               className={`lg:float-left lg:left-[-2000px] relative ${
                 scrollH >= 370 ? "transition-origin" : ""
               }`}
             >
-              <div
-                style={epicAssetStyle}
-                className="mt-4 inline-block text-center"
-              >
-                <div>
-                  <img className="inline" src={EpicAsset1Img} alt="epic" />
-                  <img className="inline" src={EpicAsset2Img} alt="epic" />
-                </div>
-                <div>
-                  <img className="inline" src={EpicAsset3Img} alt="epic" />
-                  <img className="inline" src={EpicAsset4Img} alt="epic" />
-                </div>
-                <div>
-                  <img className="inline" src={EpicAsset5Img} alt="epic" />
-                  <img className="inline" src={EpicAsset6Img} alt="epic" />
-                </div>
-              </div>
-              <div className="w-full mt-3">
-                <button
-                  style={mintBtnStyle}
-                  className="border-0 text-28 font-semibold"
+              <AnimationOnScroll animateIn="bounceInLeft">
+                <div
+                  style={epicAssetStyle}
+                  className="mt-4 inline-block text-center"
                 >
-                  Mint
-                </button>
-              </div>
+                  <div>
+                    <img className="inline" src={EpicAsset1Img} alt="epic" />
+                    <img className="inline" src={EpicAsset2Img} alt="epic" />
+                  </div>
+                  <div>
+                    <img className="inline" src={EpicAsset3Img} alt="epic" />
+                    <img className="inline" src={EpicAsset4Img} alt="epic" />
+                  </div>
+                  <div>
+                    <img className="inline" src={EpicAsset5Img} alt="epic" />
+                    <img className="inline" src={EpicAsset6Img} alt="epic" />
+                  </div>
+                </div>
+                <div className="w-full mt-3">
+                  <button
+                    style={mintBtnStyle}
+                    className="border-0 text-28 font-semibold"
+                  >
+                    Mint
+                  </button>
+                </div>
+              </AnimationOnScroll>
             </div>
-            <div
-              className={`lg:float-right md:w-1/2 md:max-w-[560px] m-auto text-left lg:left-[2000px] relative ${
-                scrollH >= 370 ? "transition-origin" : ""
-              }`}
-            >
-              <img className="mt-3 mx-auto" src={GirlImg} alt="girl" />
-              <h4 className="mt-[10px] text-37 font-bold pr-[50px] border-y border-t-0 inline-block">
-                Rarity 1/1
-              </h4>
-              <p className="mt-3 break-words text-19 font-medium">
-                Every person who buys the character does not necessarily own all
-                the sub assets, and only by purchasing the character, 3 Dynamic
-                Sub-assets will be airdrop for her.
-              </p>
+            <div className="lg:float-right md:w-1/2 md:max-w-[560px] m-auto text-left">
+              <AnimationOnScroll animateIn="bounceInRight">
+                <img className="mt-3 mx-auto" src={GirlImg} alt="girl" />
+                <h4 className="mt-[10px] text-37 font-bold pr-[50px] border-y border-t-0 inline-block">
+                  Rarity 1/1
+                </h4>
+                <p className="mt-3 break-words text-19 font-medium">
+                  Every person who buys the character does not necessarily own
+                  all the sub assets, and only by purchasing the character, 3
+                  Dynamic Sub-assets will be airdrop for her.
+                </p>
+              </AnimationOnScroll>
             </div>
           </div>
           <div>
             <div className="border-y border-t-0 border-gray text-left mx-auto mb-4 text-56 font-semibold px-[100px] inline-block mt-4">
-              Magical Ability
+              <AnimationOnScroll animateIn="flipInY">
+                Magical Ability
+              </AnimationOnScroll>
             </div>
             <div className="md:grid grid-cols-3 overflow-hidden">
-              <div
-                className={`col-start-2 lg:top-[-7000px] relative ${
-                  scrollH >= 1270 ? "transition-origin" : ""
-                }`}
-              >
-                <div className="text-center text-29 font-semibold">1/1</div>
-                <img className="m-auto" src={DragonImg} alt="dragon" />
-                <div className="text-43 font-semibold tracking-standard">
-                  Miracle
-                </div>
-              </div>
-              <div
-                className={`col-start-1 lg:left-[-2000px] relative ${
-                  scrollH >= 1270 ? "transition-origin" : ""
-                }`}
-              >
-                <div className="flex">
-                  <div className="-rotate-90 text-33 font-semibold min-w-[180px] h-[56px] relative top-[95px] -left-[60px]">
-                    Potion Cards
+              <div className="col-start-2">
+                <AnimationOnScroll animateIn="fadeIn">
+                  <div className="text-center text-29 font-semibold">1/1</div>
+                  <img className="m-auto" src={DragonImg} alt="dragon" />
+                  <div className="text-43 font-semibold tracking-standard">
+                    Miracle
                   </div>
-                  <img
-                    className="-ml-[145px]"
-                    src={CardImg}
-                    alt="card"
-                    width={250}
-                  />
-                </div>
-                <div className="w-[340px]">
-                  <img
-                    src={CardLineImg}
-                    className="inline-block"
-                    alt="cardline"
-                  />
-                </div>
-                <div className="grid grid-cols-3 gap-3 w-[330px]">
-                  <img src={SunRaysImg} alt="sunrays" />
-                  <img src={bloodWarImg} alt="bloodwar" />
-                  <img src={TransformationImg} alt="transform" />
-                </div>
-                <div className="w-[330px]">1/3</div>
+                </AnimationOnScroll>
+              </div>
+              <div className="col-start-1">
+                <AnimationOnScroll animateIn="bounceInLeft">
+                  <div className="flex">
+                    <div className="-rotate-90 text-33 font-semibold min-w-[180px] h-[56px] relative top-[95px] -left-[60px]">
+                      Potion Cards
+                    </div>
+                    <img
+                      className="-ml-[145px]"
+                      src={CardImg}
+                      alt="card"
+                      width={250}
+                    />
+                  </div>
+                  <div className="w-[340px]">
+                    <img
+                      src={CardLineImg}
+                      className="inline-block"
+                      alt="cardline"
+                    />
+                  </div>
+                  <div className="grid grid-cols-3 gap-3 w-[330px]">
+                    <img src={SunRaysImg} alt="sunrays" />
+                    <img src={bloodWarImg} alt="bloodwar" />
+                    <img src={TransformationImg} alt="transform" />
+                  </div>
+                  <div className="w-[330px]">1/3</div>
+                </AnimationOnScroll>
               </div>
               <div className="relative min-h-[150px]">
                 <div
@@ -236,71 +233,71 @@ const AntverseMint: React.FC<AntverseMintProps> = () => {
                   <div className="hidden md:block w-[12vw] h-[2px] absolute left-[100%] top-[50px] bg-white rotate-12"></div>
                 </div>
               </div>
-              <div
-                className={`lg:left-[2000px] relative ${
-                  scrollH >= 1270 ? "transition-origin" : ""
-                }`}
-              >
-                <div className="w-full h-[260px]">
-                  <div className="flex right-0 float-right content-right w-[290px]">
-                    <img
-                      className="inline-block"
-                      src={IconImg}
-                      alt="icon"
-                      width={250}
-                    />
-                    <div className="rotate-90 text-33 font-semibold min-w-[208px] h-[56px] relative top-[95px] -left-[80px]">
-                      Miracle Custom
+              <div>
+                <AnimationOnScroll animateIn="bounceInRight">
+                  <div className="w-full h-[260px]">
+                    <div className="flex right-0 float-right content-right w-[290px]">
+                      <img
+                        className="inline-block"
+                        src={IconImg}
+                        alt="icon"
+                        width={250}
+                      />
+                      <div className="rotate-90 text-33 font-semibold min-w-[208px] h-[56px] relative top-[95px] -left-[80px]">
+                        Miracle Custom
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="text-right">
+                  <div className="text-right">
+                    <img
+                      src={TouchesImg}
+                      alt="touches"
+                      className="inline-block shadow-[0px_7px_5px_rgba(0,0,0,0.3)] rounded-[15px] mt-[30px]"
+                    />
+                  </div>
+                  <div className="w-[314px] float-right mt-4">1/1</div>
+                </AnimationOnScroll>
+              </div>
+              <div className="col-start-2 mt-[100px]">
+                <AnimationOnScroll animateIn="fadeIn">
                   <img
-                    src={TouchesImg}
-                    alt="touches"
-                    className="inline-block shadow-[0px_7px_5px_rgba(0,0,0,0.3)] rounded-[15px] mt-[30px]"
+                    src={RenderImg}
+                    alt="render"
+                    className="scale-125 mx-auto"
+                  />
+                </AnimationOnScroll>
+              </div>
+            </div>
+            <AnimationOnScroll animateIn="bounceInLeft">
+              <div style={identityStyle} className="mt-5">
+                <h3 className="text-42 md:text-53 font-semibold">IDENTITY</h3>
+                <div className="w-4/5 max-w-[530px] h-[1px] bg-gray m-auto"></div>
+                <p className="text-26 font-medium tracking-standard">BMMusic</p>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-[50px]">
+                  <img src={BloomImg} className="w-full" alt="bloom" />
+                  <img src={DayaalImg} className="w-full" alt="dayaa" />
+                  <img
+                    src={QueenBereniceImg}
+                    className="w-full"
+                    alt="queenberenice"
+                  />
+                  <img
+                    src={AntonAntsteinImg}
+                    className="w-full"
+                    alt="antonantstein"
+                  />
+                  <img src={RenataImg} className="w-full" alt="renata" />
+                  <img
+                    src={QueenFariciahImg}
+                    className="w-full"
+                    alt="queenfariciah"
                   />
                 </div>
-                <div className="w-[314px] float-right mt-4">1/1</div>
+                <div className="text-center mt-4 text-29 font-semibold">
+                  1/1
+                </div>
               </div>
-              <div
-                className={`col-start-2 mt-[100px] lg:-mt-[200px] lg:top-[2000px] relative ${
-                  scrollH >= 1270 ? "transition-origin" : ""
-                }`}
-              >
-                <img
-                  src={RenderImg}
-                  alt="render"
-                  className="scale-125 mx-auto"
-                />
-              </div>
-            </div>
-            <div style={identityStyle} className="mt-5">
-              <h3 className="text-42 md:text-53 font-semibold">IDENTITY</h3>
-              <div className="w-4/5 max-w-[530px] h-[1px] bg-gray m-auto"></div>
-              <p className="text-26 font-medium tracking-standard">BMMusic</p>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-[50px]">
-                <img src={BloomImg} className="w-full" alt="bloom" />
-                <img src={DayaalImg} className="w-full" alt="dayaa" />
-                <img
-                  src={QueenBereniceImg}
-                  className="w-full"
-                  alt="queenberenice"
-                />
-                <img
-                  src={AntonAntsteinImg}
-                  className="w-full"
-                  alt="antonantstein"
-                />
-                <img src={RenataImg} className="w-full" alt="renata" />
-                <img
-                  src={QueenFariciahImg}
-                  className="w-full"
-                  alt="queenfariciah"
-                />
-              </div>
-              <div className="text-center mt-4 text-29 font-semibold">1/1</div>
-            </div>
+            </AnimationOnScroll>
             <p className="text-25 my-[50px] font-medium px-4">
               the word “Identity” refers to the identity of the characters.
               Let’s say it more clearly, the owner of the identity of any
@@ -311,60 +308,69 @@ const AntverseMint: React.FC<AntverseMintProps> = () => {
               Metaverse will be verified by the music (in fact by the wave
               produced by each track) existed in the identity card.
             </p>
-            <button
-              style={mintBtnStyle}
-              className="border-0 text-28 font-semibold mt-5 mb-[20px]"
-            >
-              Mint
-            </button>
-            <h3 className="text-51 font-semibold max-w-[570px] border-gray border-y border-t-0 mx-auto">
-              Dynamic Assets 1/99
-            </h3>
-          </div>
-        </div>
-        <div className="px-[20px] md:px-[30px] xl:px-[130px] mt-[40px]">
-          <div
-            className="grid grid-cols-1 md:grid-cols-3 gap-5 px-[50px] md:px-[100px] py-[20px]"
-            style={dynamicAssetStyle}
-          >
-            <img src={AntoanImg} className="w-full" alt="antoan" />
-            <img src={BerenecImg} className="w-full" alt="berabec" />
-            <img src={Bloom1Img} className="w-full" alt="bloom1" />
-            <img src={DayalaImg} className="w-full" alt="dayala" />
-            <img src={QueenImg} className="w-full" alt="queen" />
-            <img src={RenetaImg} className="w-full" alt="renata" />
-          </div>
-        </div>
-        <div className="my-[40px] max-w-[1090px] mx-auto text-left px-[50px]">
-          <p className="text-28 font-semibold">
-            10% of all purchases and sales of sub assets go to the owner of the
-            epic character for allowing them access to the read only version.
-          </p>
-          <div className="grid grid-cols-2 my-[40px]">
-            <div className="text-center">
+            <AnimationOnScroll animateIn="wobble">
               <button
                 style={mintBtnStyle}
-                className="border-0 text-28 font-semibold"
+                className="border-0 text-28 font-semibold mt-5 mb-[20px]"
               >
                 Mint
               </button>
+            </AnimationOnScroll>
+            <AnimationOnScroll animateIn="flipInX">
+              <h3 className="text-51 font-semibold max-w-[570px] border-gray border-y border-t-0 mx-auto">
+                Dynamic Assets 1/99
+              </h3>
+            </AnimationOnScroll>
+          </div>
+        </div>
+        <div className="px-[20px] md:px-[30px] xl:px-[130px] mt-[40px]">
+          <AnimationOnScroll animateIn="flipInY">
+            <div
+              className="grid grid-cols-1 md:grid-cols-3 gap-5 px-[50px] md:px-[100px] py-[20px]"
+              style={dynamicAssetStyle}
+            >
+              <img src={AntoanImg} className="w-full" alt="antoan" />
+              <img src={BerenecImg} className="w-full" alt="berabec" />
+              <img src={Bloom1Img} className="w-full" alt="bloom1" />
+              <img src={DayalaImg} className="w-full" alt="dayala" />
+              <img src={QueenImg} className="w-full" alt="queen" />
+              <img src={RenetaImg} className="w-full" alt="renata" />
+            </div>
+          </AnimationOnScroll>
+        </div>
+        <div className="my-[40px] max-w-[1090px] mx-auto text-left px-[50px]">
+          <AnimationOnScroll animateIn="flipInX">
+            <p className="text-28 font-semibold">
+              10% of all purchases and sales of sub assets go to the owner of
+              the epic character for allowing them access to the read only
+              version.
+            </p>
+          </AnimationOnScroll>
+          <div className="grid grid-cols-2 my-[40px]">
+            <div className="text-center">
+              <AnimationOnScroll animateIn="bounceInLeft">
+                <button
+                  style={mintBtnStyle}
+                  className="border-0 text-28 font-semibold"
+                >
+                  Mint
+                </button>
+              </AnimationOnScroll>
             </div>
             <div className="text-center">
-              <button
-                style={mintBtnStyle}
-                className="border-0 text-28 font-semibold"
-              >
-                Edit
-              </button>
+              <AnimationOnScroll animateIn="bounceInRight">
+                <button
+                  style={mintBtnStyle}
+                  className="border-0 text-28 font-semibold"
+                >
+                  Edit
+                </button>
+              </AnimationOnScroll>
             </div>
           </div>
-          <div
-            className={`lg:left-[2000px] relative ${
-              scrollH >= 4200 ? "transition-origin" : ""
-            }`}
-          >
+          <AnimationOnScroll animateIn="fadeIn">
             <img src={BlomeImg} alt="blome" className="m-auto" />
-          </div>
+          </AnimationOnScroll>
         </div>
       </div>
     </Layout>

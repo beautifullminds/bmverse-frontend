@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef } from "react";
 import Layout from "components/Layout";
 import Menu from "components/Menu";
 import BMblog from "components/blocks/BMblog";
@@ -10,15 +10,6 @@ interface BMcardProps {}
 
 const BMcard: React.FC<BMcardProps> = () => {
   const layoutView = useRef(null);
-  const [scrollH, setScrollH] = useState(-1);
-
-  useEffect(() => {
-    setScrollH(0);
-    const onScroll = () => setScrollH(window.pageYOffset);
-    window.removeEventListener("scroll", onScroll);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
     <Layout ref={layoutView}>
@@ -115,10 +106,10 @@ const BMcard: React.FC<BMcardProps> = () => {
           </div>
         </div>
         <div className="com-content">
-          <BMblog scroll={scrollH} />
+          <BMblog />
         </div>
         <div className="com-content">
-          <Collaborate scroll={scrollH} />
+          <Collaborate />
         </div>
         <Footer />
       </div>

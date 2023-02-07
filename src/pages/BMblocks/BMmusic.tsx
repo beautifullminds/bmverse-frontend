@@ -1,4 +1,5 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef } from "react";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 import Layout from "components/Layout";
 import Menu from "components/Menu";
 import BMblog from "components/blocks/BMblog";
@@ -15,15 +16,6 @@ interface BMmusicProps {}
 
 const BMmusic: React.FC<BMmusicProps> = () => {
   const layoutView = useRef(null);
-  const [scrollH, setScrollH] = useState(-1);
-
-  useEffect(() => {
-    setScrollH(0);
-    const onScroll = () => setScrollH(window.pageYOffset);
-    window.removeEventListener("scroll", onScroll);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
     <Layout ref={layoutView}>
@@ -47,16 +39,14 @@ const BMmusic: React.FC<BMmusicProps> = () => {
               roup <span className="text-32 font-bold"> M</span>
               etaverse will be
             </div>
-            <div
-              className={`lg:left-[1000px] relative ${
-                scrollH >= 6 ? "transition-origin" : ""
-              }`}
-            >
-              <img
-                src={BgImg}
-                className="full-img my-[80px] max-w-none"
-                alt="bg"
-              />
+            <div>
+              <AnimationOnScroll animateIn="flipInY">
+                <img
+                  src={BgImg}
+                  className="full-img my-[80px] max-w-none"
+                  alt="bg"
+                />
+              </AnimationOnScroll>
             </div>
 
             <div className="uppercase text-32 font-bold break-all pt-4 [word-spacing: 7px]">
@@ -72,22 +62,20 @@ const BMmusic: React.FC<BMmusicProps> = () => {
               etaverse of <span className="text-38">BM M</span>ega and
               <span className="text-38"> BM G</span>alaxy.
             </div>
-            <div
-              className={`md:grid grid-cols-3 gap-6 lg:-left-[1000px] relative ${
-                scrollH >= 886 ? "transition-origin" : ""
-              }`}
-            >
-              <img src={Galary1Img} className="w-full" alt="galary" />
-              <img src={Galary2Img} className="w-full" alt="galary" />
-              <img src={Galary3Img} className="w-full" alt="galary" />
-            </div>
+            <AnimationOnScroll animateIn="fadeIn">
+              <div className="md:grid grid-cols-3 gap-6">
+                <img src={Galary1Img} className="w-full" alt="galary" />
+                <img src={Galary2Img} className="w-full" alt="galary" />
+                <img src={Galary3Img} className="w-full" alt="galary" />
+              </div>
+            </AnimationOnScroll>
           </div>
         </div>
         <div className="com-content">
-          <BMblog scroll={scrollH} />
+          <BMblog />
         </div>
         <div className="com-content">
-          <Collaborate scroll={scrollH} />
+          <Collaborate />
         </div>
         <Footer />
       </div>

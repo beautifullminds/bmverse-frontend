@@ -1,3 +1,4 @@
+import { AnimationOnScroll } from "react-animation-on-scroll";
 import line from "assets/imgs/galaxy/Line.png";
 
 interface FooterProps {}
@@ -10,47 +11,56 @@ const Footer: React.FC<FooterProps> = () => {
           <img src={line} className="inline" alt="line" />
         </div>
         <div className="footer_heading">
-          <h1>Contact Us</h1>
+          <AnimationOnScroll animateIn="flipInY">
+            <h1>Contact Us</h1>
+          </AnimationOnScroll>
         </div>
-        <div className="input_div">
-          <input
-            type="text"
-            id="fname"
-            name="fname"
-            placeholder="Your Name*"
-            required
-          />
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Your Email*"
-            required
-          />
-        </div>
-        <div className="input_div">
-          <input
-            type="phone"
-            id="phone"
-            name="phone"
-            placeholder="Your Phone"
-          />
-          <input type="text" id="topic" name="topic" placeholder="Topic" />
-        </div>
-
+        <AnimationOnScroll animateIn="bounceInLeft">
+          <div className="input_div">
+            <input
+              type="text"
+              id="fname"
+              name="fname"
+              placeholder="Your Name*"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your Email*"
+              required
+            />
+          </div>
+        </AnimationOnScroll>
+        <AnimationOnScroll animateIn="bounceInRight">
+          <div className="input_div">
+            <input
+              type="phone"
+              id="phone"
+              name="phone"
+              placeholder="Your Phone"
+            />
+            <input type="text" id="topic" name="topic" placeholder="Topic" />
+          </div>
+        </AnimationOnScroll>
         <div className="text_area_div">
-          <textarea
-            id="message"
-            name="message"
-            rows={13}
-            placeholder="Message"
-          />
+          <AnimationOnScroll animateIn="fadeIn">
+            <textarea
+              id="message"
+              name="message"
+              rows={13}
+              placeholder="Message"
+            />
+          </AnimationOnScroll>
         </div>
       </form>
       <div className="footer_btn">
-        <button type="submit" form="formal" value="Submit">
-          Send Message
-        </button>
+        <AnimationOnScroll animateIn="flipInX">
+          <button type="submit" form="formal" value="Submit">
+            Send Message
+          </button>
+        </AnimationOnScroll>
       </div>
       <div className="bottom_footer">
         <div className="footer_div_1">

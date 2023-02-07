@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef } from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import Layout from "components/Layout";
 import Menu from "components/Menu";
@@ -16,16 +16,6 @@ interface BMgameProps {}
 
 const BMgame: React.FC<BMgameProps> = () => {
   const layoutView = useRef(null);
-  const [scrollH, setScrollH] = useState(-1);
-
-  useEffect(() => {
-    setScrollH(0);
-    const onScroll = () => setScrollH(window.pageYOffset);
-    // clean up code
-    window.removeEventListener("scroll", onScroll);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
     <Layout ref={layoutView}>
@@ -122,10 +112,10 @@ const BMgame: React.FC<BMgameProps> = () => {
           </div>
         </div>
         <div className="com-content">
-          <BMblog scroll={scrollH} />
+          <BMblog />
         </div>
         <div className="com-content">
-          <Collaborate scroll={scrollH} />
+          <Collaborate />
         </div>
         <Footer />
       </div>
