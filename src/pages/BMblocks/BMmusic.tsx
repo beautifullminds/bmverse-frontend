@@ -50,17 +50,21 @@ const BMmusic: React.FC<BMmusicProps> = () => {
             </div>
 
             <div className="uppercase text-32 font-bold break-all pt-4 [word-spacing: 7px]">
-              <span className="text-42">I</span>n fact, verified by the wave
-              produced by each track
+              <AnimationOnScroll animateIn="bounceInLeft">
+                <span className="text-42">I</span>n fact, verified by the wave
+                produced by each track
+              </AnimationOnScroll>
             </div>
             <div className="uppercase text-30 break-all pt-4 [word-spacing: 7px] text-left my-[60px]">
-              the word "<span className="text-38">I</span>dentity" refers to the
-              identity of the characters,
-              <span className="text-38"> L</span>et's say it more clearly, the
-              owner of the identity of any character can have the ability to
-              travel in <span className="text-38">M</span>
-              etaverse of <span className="text-38">BM M</span>ega and
-              <span className="text-38"> BM G</span>alaxy.
+              <AnimationOnScroll animateIn="bounceInRight">
+                the word "<span className="text-38">I</span>dentity" refers to
+                the identity of the characters,
+                <span className="text-38"> L</span>et's say it more clearly, the
+                owner of the identity of any character can have the ability to
+                travel in <span className="text-38">M</span>
+                etaverse of <span className="text-38">BM M</span>ega and
+                <span className="text-38"> BM G</span>alaxy.
+              </AnimationOnScroll>
             </div>
             <AnimationOnScroll animateIn="fadeIn">
               <div className="md:grid grid-cols-3 gap-6">

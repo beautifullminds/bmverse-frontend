@@ -72,17 +72,20 @@ const BMgame: React.FC<BMgameProps> = () => {
               className="font-semibold text-21 m-auto"
               style={{ maxWidth: "880px" }}
             >
-              The theory of the savior generation, which directly refers to all
-              the netizens and is called the generation Z as a provider for the
-              growth of the alpha generation and their guide, has focused
-              totally on game development, which apart from entertainment and
-              creating an exciting atmosphere, seeks to make It as a platform to
-              take creativity and reaching 100% of human abilities.
-              <br />
-              The first step, to take so, is to dominate decentralization in a
-              radical way on the Alpha generation. Game making is our first
-              action by which We will show the alpha generation that man is a
-              creator And not just a consumer.
+              <AnimationOnScroll animateIn="flipInX">
+                The theory of the savior generation, which directly refers to
+                all the netizens and is called the generation Z as a provider
+                for the growth of the alpha generation and their guide, has
+                focused totally on game development, which apart from
+                entertainment and creating an exciting atmosphere, seeks to make
+                It as a platform to take creativity and reaching 100% of human
+                abilities.
+                <br />
+                The first step, to take so, is to dominate decentralization in a
+                radical way on the Alpha generation. Game making is our first
+                action by which We will show the alpha generation that man is a
+                creator And not just a consumer.
+              </AnimationOnScroll>
             </div>
             <AnimationOnScroll animateIn="bounceInRight">
               <img className="mx-auto my-[40px]" src={Cons} alt="cons" />
@@ -91,24 +94,25 @@ const BMgame: React.FC<BMgameProps> = () => {
               <div className="font-semibold text-34">
                 Generations move one after another toward evolution
               </div>
+
+              <div
+                className="font-semibold text-19 rounded-[18px] p-4 m-auto shadow-[-7px_7px_0px_rgba(0,0,0,0.1)]"
+                style={{ maxWidth: "880px", background: "rgba(0,0,0,0.2)" }}
+              >
+                This evolution needs a platform that each generation takes from
+                the previous generation. We explained in detail about the
+                generation of the Savior and how it was formed in an article,
+                and it is mentioned that the alpha generation needs a
+                decentralized platform to implement social justice. The task of
+                providing the prerequisites and teaching the Alpha generation to
+                benefit from all the potentials of a decentralized platform is
+                the responsibility of the generation Z. Therefore, generation Z
+                can be called the prerequisites’ provider, and generation Alpha
+                can be called the generation of the Saviors and residents of a
+                justice-oriented society in which %100 of people’s abilities are
+                used.
+              </div>
             </AnimationOnScroll>
-            <div
-              className="font-semibold text-19 rounded-[18px] p-4 m-auto shadow-[-7px_7px_0px_rgba(0,0,0,0.1)]"
-              style={{ maxWidth: "880px", background: "rgba(0,0,0,0.2)" }}
-            >
-              This evolution needs a platform that each generation takes from
-              the previous generation. We explained in detail about the
-              generation of the Savior and how it was formed in an article, and
-              it is mentioned that the alpha generation needs a decentralized
-              platform to implement social justice. The task of providing the
-              prerequisites and teaching the Alpha generation to benefit from
-              all the potentials of a decentralized platform is the
-              responsibility of the generation Z. Therefore, generation Z can be
-              called the prerequisites’ provider, and generation Alpha can be
-              called the generation of the Saviors and residents of a
-              justice-oriented society in which %100 of people’s abilities are
-              used.
-            </div>
           </div>
         </div>
         <div className="com-content">

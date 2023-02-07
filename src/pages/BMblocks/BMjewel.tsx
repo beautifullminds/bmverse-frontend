@@ -43,21 +43,22 @@ const BMjewel: React.FC<BMjewelProps> = () => {
               <span className="text-24 md:text-42">EWEL</span>
             </h2>
             <img src={SnakImg} className="w-4/5 m-auto" alt="snake" />
-
-            <div className="text-24 md:text-38 font-semibold my-[30px]">
-              “BM Jewel, the climax point in challenging the boundaries between
-              reality and imagination”
-            </div>
-            <div className="text-19 md:text-28 font-medium px-[20px]">
-              The idea of ​​making jewelry at BMVerse is actually a landmark in
-              challenging the boundaries of the real and virtual world.
-              Combining the intrinsic value of a piece of art with its virtual
-              potential value, shows that creativity and technology cannot be
-              valued alongside the art. By working on a precious physical asset
-              in a non-physical world, we have succeeded in creating an asset
-              that simultaneously can be categorized as a fungible and
-              non-fungible asset.
-            </div>
+            <AnimationOnScroll animateIn="flipInX">
+              <div className="text-24 md:text-38 font-semibold my-[30px]">
+                “BM Jewel, the climax point in challenging the boundaries
+                between reality and imagination”
+              </div>
+              <div className="text-19 md:text-28 font-medium px-[20px]">
+                The idea of ​​making jewelry at BMVerse is actually a landmark
+                in challenging the boundaries of the real and virtual world.
+                Combining the intrinsic value of a piece of art with its virtual
+                potential value, shows that creativity and technology cannot be
+                valued alongside the art. By working on a precious physical
+                asset in a non-physical world, we have succeeded in creating an
+                asset that simultaneously can be categorized as a fungible and
+                non-fungible asset.
+              </div>
+            </AnimationOnScroll>
             <div className="mt-[50px] overflow-y-auto overflow-x-hidden">
               <AnimationOnScroll animateIn="bounceInLeft">
                 <div

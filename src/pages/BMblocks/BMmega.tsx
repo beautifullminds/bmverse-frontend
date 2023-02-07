@@ -65,31 +65,36 @@ const BMmega: React.FC<BMmegaProps> = () => {
             </div>
 
             <div>
-              <p className="text-left text-19 font-medium" style={bgStyle}>
-                Finally, each collection contains a work called The Last Supper,
-                in which all 12 characters of the collection are cryptically
-                talking to each other around a table in a certain standing
-                position and form, each of which conveys an important message.
-                In the Mega Collection, the bridge is made from imagination to
-                reality, and this feature is realizable right where the unique
-                ability and feature that each character has, is made in the real
-                world in the form of a hashed jewel, and its NFT is tradable in
-                the NFT Market Place.
-              </p>
+              {" "}
+              <AnimationOnScroll animateIn="flipInY">
+                <p className="text-left text-19 font-medium" style={bgStyle}>
+                  Finally, each collection contains a work called The Last
+                  Supper, in which all 12 characters of the collection are
+                  cryptically talking to each other around a table in a certain
+                  standing position and form, each of which conveys an important
+                  message. In the Mega Collection, the bridge is made from
+                  imagination to reality, and this feature is realizable right
+                  where the unique ability and feature that each character has,
+                  is made in the real world in the form of a hashed jewel, and
+                  its NFT is tradable in the NFT Market Place.
+                </p>
+              </AnimationOnScroll>
             </div>
-            <div className="text-46 md:text-82 my-[20px]">
-              <span className="text-orange">ANT</span>verse
-            </div>
-            <div className="max-w-[862px] m-auto">
-              Difficulty or luck, love or hate, science or habit, each became a
-              factor for an ant in a corner of a galaxy to surpass its congeners
-              and discover a unique power within itself. Ant Verse tells a story
-              of 12 mutant ants, each of them, during an event and under special
-              circumstances, left the routine of their lives and under the
-              influence of the circumstances around them, to achieve a goal that
-              is thought to be madness for other members of the society, they
-              reach extraordinary capabilities.
-            </div>
+            <AnimationOnScroll animateIn="flipInX">
+              <div className="text-46 md:text-82 my-[20px]">
+                <span className="text-orange">ANT</span>verse
+              </div>
+              <div className="max-w-[862px] m-auto">
+                Difficulty or luck, love or hate, science or habit, each became
+                a factor for an ant in a corner of a galaxy to surpass its
+                congeners and discover a unique power within itself. Ant Verse
+                tells a story of 12 mutant ants, each of them, during an event
+                and under special circumstances, left the routine of their lives
+                and under the influence of the circumstances around them, to
+                achieve a goal that is thought to be madness for other members
+                of the society, they reach extraordinary capabilities.
+              </div>
+            </AnimationOnScroll>
             <div className="flex flex-wrap mt-[80px]">
               <div className="flex items-center text-left w-full md:w-[40%]">
                 <div className="w-5/6">
@@ -126,7 +131,9 @@ const BMmega: React.FC<BMmegaProps> = () => {
               </div>
             </div>
             <div className="text-30 md:text-42 font-bold my-[40px] tracking-wide">
-              “These Mutants Would Become Rarer”
+              <AnimationOnScroll animateIn="flipInX">
+                “These Mutants Would Become Rarer”
+              </AnimationOnScroll>
             </div>
             <div>
               <AnimationOnScroll animateIn="bounceInLeft">
@@ -170,7 +177,10 @@ const BMmega: React.FC<BMmegaProps> = () => {
               </div>
             </div>
             <div className="text-31 font-semibold my-[50px]">
-              “The abilities of each character can be activated in three parts”
+              <AnimationOnScroll animateIn="flipInX">
+                “The abilities of each character can be activated in three
+                parts”
+              </AnimationOnScroll>
             </div>
             <div className="flex flex-wrap">
               <div className="w-full md:w-[40%] flex items-center">
@@ -228,24 +238,25 @@ const BMmega: React.FC<BMmegaProps> = () => {
                 <img src={GadeImg} alt="gade" />
               </AnimationOnScroll>
             </div>
-
-            <div
-              className="max-w-[800px] m-auto text-left text-16 font-semibold"
-              style={bgStyle}
-            >
-              <p className="pb-4">
-                Activating the third ability of each character requires its
-                owner’s taste and expertise. The third ability is activated only
-                if the character is developed by its owner. This development
-                includes a change in the appearance or a special improvement in
-                the characteristics by using coding and so on. After receiving
-                the third ability of each character, you will actually have
-                access to one of the codes available in the Last Supper work.
-                The Ant Verse Last Supper is a work of art taken from Da Vinci’s
-                Last Supper, in which all 12 characters are mysteriously
-                standing around a table that needs to be decoded.
-              </p>
-            </div>
+            <AnimationOnScroll animateIn="bounceInRight">
+              <div
+                className="max-w-[800px] m-auto text-left text-16 font-semibold"
+                style={bgStyle}
+              >
+                <p className="pb-4">
+                  Activating the third ability of each character requires its
+                  owner’s taste and expertise. The third ability is activated
+                  only if the character is developed by its owner. This
+                  development includes a change in the appearance or a special
+                  improvement in the characteristics by using coding and so on.
+                  After receiving the third ability of each character, you will
+                  actually have access to one of the codes available in the Last
+                  Supper work. The Ant Verse Last Supper is a work of art taken
+                  from Da Vinci’s Last Supper, in which all 12 characters are
+                  mysteriously standing around a table that needs to be decoded.
+                </p>
+              </div>
+            </AnimationOnScroll>
             <div>
               <AnimationOnScroll animateIn="bounceInLeft">
                 <img

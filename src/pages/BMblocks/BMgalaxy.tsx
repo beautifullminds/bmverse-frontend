@@ -84,47 +84,53 @@ const BMgalaxy: React.FC<BMgalaxyProps> = () => {
               className="text-26 font-semibold text-left m-auto"
               style={{ maxWidth: "1027px" }}
             >
-              The BM-Galaxy collection, the most comprehensive multiverse
-              collection, combines science, art, and history. <br />
-              Mankind has been looking for many years to pass the earth and
-              discover life in the galaxies. BMGalaxy has gone further in this
-              path and seeks to create life in galaxies.
-              <br />
-              Imagine yourself as a creator of a galaxy who is able to create a
-              world without limitations in terms of shape, size, features, etc.
-              BMGalaxy has achieved the only experience that mankind is still
-              looking for.
+              <AnimationOnScroll animateIn="bounceInLeft">
+                The BM-Galaxy collection, the most comprehensive multiverse
+                collection, combines science, art, and history. <br />
+                Mankind has been looking for many years to pass the earth and
+                discover life in the galaxies. BMGalaxy has gone further in this
+                path and seeks to create life in galaxies.
+                <br />
+                Imagine yourself as a creator of a galaxy who is able to create
+                a world without limitations in terms of shape, size, features,
+                etc. BMGalaxy has achieved the only experience that mankind is
+                still looking for.
+              </AnimationOnScroll>
             </div>
 
             <div className="text-36 font-semibold my-[50px]">
-              <AnimationOnScroll animateIn="bounceInLeft">
+              <AnimationOnScroll animateIn="fadeIn">
                 BM Galaxy is a unique masterpiece in combining art and
                 technology.
               </AnimationOnScroll>
             </div>
-            <video className="m-auto" loop autoPlay muted mix-blend-screen>
-              <source
-                src={require("assets/imgs/galaxy/sunVideo.mp4")}
-                type="video/mp4"
-              />
-            </video>
+            <AnimationOnScroll animateIn="fadeIn">
+              <video className="m-auto" loop autoPlay muted mix-blend-screen>
+                <source
+                  src={require("assets/imgs/galaxy/sunVideo.mp4")}
+                  type="video/mp4"
+                />
+              </video>
+            </AnimationOnScroll>
             <div className="my-[50px]">
               <img className="m-auto" src={LineImg} alt="line" />
             </div>
 
             <div className="md:grid md:grid-cols-2 w-full">
               <div className="col-start-2">
-                <video
-                  className="m-auto md:float-right md:w-2/3"
-                  loop
-                  autoPlay
-                  muted
-                >
-                  <source
-                    src={require("assets/imgs/galaxy/video1.mp4")}
-                    type="video/mp4"
-                  />
-                </video>
+                <AnimationOnScroll animateIn="fadeIn">
+                  <video
+                    className="m-auto md:float-right md:w-2/3"
+                    loop
+                    autoPlay
+                    muted
+                  >
+                    <source
+                      src={require("assets/imgs/galaxy/video1.mp4")}
+                      type="video/mp4"
+                    />
+                  </video>
+                </AnimationOnScroll>
               </div>
               <div className="text-left font-medium">
                 <AnimationOnScroll animateIn="bounceInLeft">
@@ -154,17 +160,19 @@ const BMgalaxy: React.FC<BMgalaxyProps> = () => {
                 </AnimationOnScroll>
               </div>
               <div>
-                <video
-                  className="m-auto md:float-right md:w-2/3"
-                  loop
-                  autoPlay
-                  muted
-                >
-                  <source
-                    src={require("assets/imgs/galaxy/video2.mp4")}
-                    type="video/mp4"
-                  />
-                </video>
+                <AnimationOnScroll animateIn="fadeIn">
+                  <video
+                    className="m-auto md:float-right md:w-2/3"
+                    loop
+                    autoPlay
+                    muted
+                  >
+                    <source
+                      src={require("assets/imgs/galaxy/video2.mp4")}
+                      type="video/mp4"
+                    />
+                  </video>
+                </AnimationOnScroll>
               </div>
               <div className="text-left">
                 <img
@@ -180,14 +188,18 @@ const BMgalaxy: React.FC<BMgalaxyProps> = () => {
               </div>
             </div>
           </div>
-          <img src={LightTextImg} className="w-full" alt="lighttext" />
+          <AnimationOnScroll animateIn="flipInX">
+            <img src={LightTextImg} className="w-full" alt="lighttext" />
+          </AnimationOnScroll>
           <div
             className="content text-center"
             style={{ marginTop: 0, paddingTop: "70px" }}
           >
-            <h3 className="text-24 md:text-36 font-semibold pb-6">
-              “Applying Science And Laws Of Nature To Realize Imagination”
-            </h3>
+            <AnimationOnScroll animateIn="bounce">
+              <h3 className="text-24 md:text-36 font-semibold pb-6">
+                “Applying Science And Laws Of Nature To Realize Imagination”
+              </h3>
+            </AnimationOnScroll>
             <div className="md:flex">
               <div className="w-full md:w-2/3 md:flex md:pr-3">
                 <AnimationOnScroll animateIn="bounceInLeft">
@@ -222,40 +234,47 @@ const BMgalaxy: React.FC<BMgalaxyProps> = () => {
                 />
               </video>
             </div>
-
-            <div className="text-18 md:text-26 font-semibold" style={bg3Style}>
-              Using Particle Systems, Simulators Developed In Artificial
-              Intelligence, And Machine Learning, We Created A Unique
-              Interaction Between The Human Brain Waves, Brain Galactic
-              Frequency Reception, And Creator Algorithms. This Interaction,
-              Which As A Matter Of Fact Includes The Emotions, Thoughts, And
-              Creativity Between The Player And The Super-Intelligent Core Of
-              Our Metaverse Game, Makes Connections Between The Player’s Brain
-              Neurons.
-            </div>
+            <AnimationOnScroll animateIn="bounceInLeft">
+              <div
+                className="text-18 md:text-26 font-semibold"
+                style={bg3Style}
+              >
+                Using Particle Systems, Simulators Developed In Artificial
+                Intelligence, And Machine Learning, We Created A Unique
+                Interaction Between The Human Brain Waves, Brain Galactic
+                Frequency Reception, And Creator Algorithms. This Interaction,
+                Which As A Matter Of Fact Includes The Emotions, Thoughts, And
+                Creativity Between The Player And The Super-Intelligent Core Of
+                Our Metaverse Game, Makes Connections Between The Player’s Brain
+                Neurons.
+              </div>
+            </AnimationOnScroll>
             <div>
               <AnimationOnScroll animateIn="bounce">
                 <img src={VainsImg} alt="galaxy" className="mt-[120px]" />
               </AnimationOnScroll>
             </div>
-
-            <div
-              className="text-14 md:text-24 font-semibold mt-5"
-              style={bg3Style}
-            >
-              All brain waves are generated by coordinated electrical pulses
-              from masses of interconnected neurons; Which will ultimately
-              create the unique interactive assets between the metaverse and the
-              real world. The galaxies on which BMVerse is defined can be
-              considered as a living thing, just like the nature in which we
-              live.
-            </div>
-            <div className="text-22 md:text-32 font-bold mt-[40px]">
-              Wealth is in our minds, and only creativity and excitement will
-              make it real. <br />
-              Creativity provides ways that few have gone; <br />
-              BMverse is with you on this exciting journey.
-            </div>
+            <AnimationOnScroll animateIn="bounceInRight">
+              <div
+                className="text-14 md:text-24 font-semibold mt-5"
+                style={bg3Style}
+              >
+                All brain waves are generated by coordinated electrical pulses
+                from masses of interconnected neurons; Which will ultimately
+                create the unique interactive assets between the metaverse and
+                the real world. The galaxies on which BMVerse is defined can be
+                considered as a living thing, just like the nature in which we
+                live.
+              </div>
+            </AnimationOnScroll>
+            <AnimationOnScroll animateIn="flipInX">
+              <div className="text-22 md:text-32 font-bold mt-[40px]">
+                Wealth is in our minds, and only creativity and excitement will
+                make it real. <br />
+                Creativity provides ways that few have gone; <br />
+                BMverse is with you on this exciting journey.
+              </div>
+            </AnimationOnScroll>
           </div>
         </div>
         <div className="com-content">
