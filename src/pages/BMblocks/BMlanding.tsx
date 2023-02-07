@@ -1,5 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
-import configs from "configs";
+import React, { useRef } from "react";
 import Layout from "components/Layout";
 
 import LinkedinIcon from "assets/imgs/landing/linkedin.png";
@@ -18,18 +17,9 @@ interface BMlandingProps {}
 
 const BMlanding: React.FC<BMlandingProps> = () => {
   const layoutView = useRef(null);
-  const [scrollH, setScrollH] = useState(-1);
-
-  useEffect(() => {
-    setScrollH(0);
-    const onScroll = () => setScrollH(window.pageYOffset);
-    window.removeEventListener("scroll", onScroll);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
-    <Layout ref={layoutView} scroll={scrollH}>
+    <Layout ref={layoutView}>
       <div className="px-5 bg-dark min-h-[100vh] pb-[50px] pt-[120px]">
         <div
           style={contentStyle}
@@ -37,7 +27,7 @@ const BMlanding: React.FC<BMlandingProps> = () => {
             text-center 
             rounded-[50px] 
             bg-100 
-            w-full 
+            w-3/4 
             shadow-[0px_0px_30px_rgba(255,255,255,0.2)] 
             relative 
             p-[30px_10px_150px] 
@@ -59,18 +49,18 @@ const BMlanding: React.FC<BMlandingProps> = () => {
               </video>
             </div>
             <div className="md:w-3/5 text-left">
-              <div className="text-47 font-bold tracking-wide mt-[30px]">
+              <div className="text-25 md:text-34 font-bold tracking-wide mt-[30px] mb-3">
                 BMverse "Beautifull Minds Foundation"
               </div>
-              <div className="text-26 md:text-32 font-bold tracking-standard break-all">
+              <div className="text-19 md:text-24 font-bold tracking-standard break-all">
                 The decentralized platforms provider
               </div>
-              <div className="text-26 md:text-32 font-bold tracking-standard break-all">
+              <div className="text-19 md:text-24 font-bold tracking-standard break-all">
                 Generation ALPHA Prerequisites in #WEB3
               </div>
               <div className="md:grid grid-cols-3 gap-[50px] mt-[60px]">
                 <div className="rounded-[20px] border-2 border-white p-3 mb-5">
-                  <div className="text-36 font-bold">Community</div>
+                  <div className="text-27 font-bold">Community</div>
                   <p className="text-18 font-bold">Development Capability</p>
                   <div className="text-12 font-bold mt-3">
                     The First Global Web3 Community For Designer Professionals.
@@ -80,7 +70,7 @@ const BMlanding: React.FC<BMlandingProps> = () => {
                   </div>
                 </div>
                 <div className="rounded-[20px] border-2 border-white p-3 mb-5">
-                  <div className="text-36 font-bold">Discover</div>
+                  <div className="text-27 font-bold">Discover</div>
                   <p className="text-18 font-bold">unique Senses</p>
                   <div className="text-12 font-bold mt-3">
                     Relying on the data obtained from the analysis of the
@@ -90,7 +80,7 @@ const BMlanding: React.FC<BMlandingProps> = () => {
                   </div>
                 </div>
                 <div className="rounded-[20px] border-2 border-white p-3 mb-5">
-                  <div className="text-36 font-bold">Next-Gen of</div>
+                  <div className="text-27 font-bold">Next-Gen of</div>
                   <p className="text-18 font-bold">
                     Interactive metaverse games
                   </p>

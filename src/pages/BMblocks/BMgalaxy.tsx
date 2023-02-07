@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 import Layout from "components/Layout";
 import Menu from "components/Menu";
 import BMblog from "components/blocks/BMblog";
@@ -48,7 +49,7 @@ const BMgalaxy: React.FC<BMgalaxyProps> = () => {
   }, []);
 
   return (
-    <Layout ref={layoutView} scroll={scrollH}>
+    <Layout ref={layoutView}>
       <div className="landing-container">
         <LandingHeader />
         <Menu />
@@ -56,11 +57,7 @@ const BMgalaxy: React.FC<BMgalaxyProps> = () => {
           <div className="content text-center">
             <h2 className="text-46 md:text-64 font-bold">BM GALAXY</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-[50px]">
-              <div
-                className={`bg-black rounded-[40px] lg:left-[-1000px] relative ${
-                  scrollH >= 0 ? "transition-origin" : ""
-                }`}
-              >
+              <div className="bg-black rounded-[40px]">
                 <img src={GalaxyImg} className="w-full" alt="galaxyimg" />
                 <div className="p-2 md:flex">
                   <p className="md:w-4/5 text-left text-21 font-semibold relative">
@@ -83,11 +80,7 @@ const BMgalaxy: React.FC<BMgalaxyProps> = () => {
                   </div>
                 </div>
               </div>
-              <div
-                className={`text-left text-26 md:text-30 font-medium md:mt-[100px] lg:left-[1000px] relative ${
-                  scrollH >= 0 ? "transition-origin" : ""
-                }`}
-              >
+              <div className="text-left text-26 md:text-30 font-medium md:mt-[100px]">
                 Man, Innately, Is A Creator, Enters The World, Uses Th Creation
                 Of Others, Grows, Evolves, And Provides What The Next Generation
                 Needs.
@@ -112,12 +105,11 @@ const BMgalaxy: React.FC<BMgalaxyProps> = () => {
               looking for.
             </div>
 
-            <div
-              className={`text-36 font-semibold my-[50px] lg:left-[-1700px] relative ${
-                scrollH >= 500 ? "transition-origin" : ""
-              }`}
-            >
-              BM Galaxy is a unique masterpiece in combining art and technology.
+            <div className="text-36 font-semibold my-[50px]">
+              <AnimationOnScroll animateIn="bounceInLeft">
+                BM Galaxy is a unique masterpiece in combining art and
+                technology.
+              </AnimationOnScroll>
             </div>
             <video className="m-auto" loop autoPlay muted mix-blend-screen>
               <source
@@ -143,19 +135,17 @@ const BMgalaxy: React.FC<BMgalaxyProps> = () => {
                   />
                 </video>
               </div>
-              <div
-                className={`text-left font-medium lg:top-[1000px] relative ${
-                  scrollH >= 1300 ? "transition-origin" : ""
-                }`}
-              >
-                <p style={bg1Style} className="p-2 text-10 md:text-19">
-                  The Galaxies on which BMgalaxy is defined can be considered as
-                  a living thing, similar to the nature in which we live. These
-                  galaxies, which were created 30 years ago without any concept
-                  design, were created by millions of dots, each of which was
-                  the result of a particular vibration in the brain of the
-                  designer artist.
-                </p>
+              <div className="text-left font-medium">
+                <AnimationOnScroll animateIn="bounceInLeft">
+                  <p style={bg1Style} className="p-2 text-10 md:text-19">
+                    The Galaxies on which BMgalaxy is defined can be considered
+                    as a living thing, similar to the nature in which we live.
+                    These galaxies, which were created 30 years ago without any
+                    concept design, were created by millions of dots, each of
+                    which was the result of a particular vibration in the brain
+                    of the designer artist.
+                  </p>
+                </AnimationOnScroll>
               </div>
               <div className="text-left">
                 <img
@@ -164,15 +154,13 @@ const BMgalaxy: React.FC<BMgalaxyProps> = () => {
                   className="relative w-1/2 left-[20px] top-[-80px] hidden md:inline-block"
                 />
               </div>
-              <div
-                className={`col-start-2 text-left font-medium mt-[50px] md:mt-0 lg:top-[1000px] relative ${
-                  scrollH >= 1630 ? "transition-origin" : ""
-                }`}
-              >
-                <p style={bg1Style} className="p-2 text-10 md:text-19">
-                  <span className="text-orange">Wealth</span> is in our minds,
-                  and only creativity and excitement will make it real.
-                </p>
+              <div className="col-start-2 text-left font-medium mt-[50px] md:mt-0">
+                <AnimationOnScroll animateIn="bounceInRight">
+                  <p style={bg1Style} className="p-2 text-10 md:text-19">
+                    <span className="text-orange">Wealth</span> is in our minds,
+                    and only creativity and excitement will make it real.
+                  </p>
+                </AnimationOnScroll>
               </div>
               <div>
                 <video
@@ -194,12 +182,10 @@ const BMgalaxy: React.FC<BMgalaxyProps> = () => {
                   className="relative w-2/3 left-[-10vw] hidden md:inline-block"
                 />
               </div>
-              <div
-                className={`col-start-2 text-left font-medium md:mt-[-50px] lg:top-[1000px] relative ${
-                  scrollH >= 1950 ? "transition-origin" : ""
-                }`}
-              >
-                <img src={ParaImg} alt="para" />
+              <div className="col-start-2 text-left font-medium md:mt-[-50px]">
+                <AnimationOnScroll animateIn="wobble">
+                  <img src={ParaImg} alt="para" />
+                </AnimationOnScroll>
               </div>
             </div>
           </div>
@@ -212,26 +198,29 @@ const BMgalaxy: React.FC<BMgalaxyProps> = () => {
               “Applying Science And Laws Of Nature To Realize Imagination”
             </h3>
             <div className="md:flex">
-              <div
-                className={`w-full md:w-2/3 md:flex md:pr-3 lg:left-[-1400px] relative ${
-                  scrollH >= 2400 ? "transition-origin" : ""
-                }`}
-              >
-                <img src={Galaxy5Img} alt="galaxy" className="object-contain" />
+              <div className="w-full md:w-2/3 md:flex md:pr-3">
+                <AnimationOnScroll animateIn="bounceInLeft">
+                  <img
+                    src={Galaxy5Img}
+                    alt="galaxy"
+                    className="object-contain"
+                  />
+                </AnimationOnScroll>
               </div>
               <div
-                className={`text-18 md:text-24 w-full md:w-1/3 py-5 px-3 lg:left-[1400px] relative ${
-                  scrollH >= 2400 ? "transition-origin" : ""
-                }`}
+                className="text-18 md:text-24 w-full md:w-1/3 py-5 px-3"
                 style={bg2Style}
               >
-                Relying on the data obtained from the analysis of the
-                frequencies produced and received by the brain, we realized that
-                it is possible to provide gamers with the most realistic sense
-                of a virtual world by analyzing and regulating these vibrations
-                and establishing communication between the parts of the brain
-                that are more active in creativity and mental imagery with a
-                super-intelligent core of Metaverse-based games.
+                <AnimationOnScroll animateIn="bounceInRight">
+                  Relying on the data obtained from the analysis of the
+                  frequencies produced and received by the brain, we realized
+                  that it is possible to provide gamers with the most realistic
+                  sense of a virtual world by analyzing and regulating these
+                  vibrations and establishing communication between the parts of
+                  the brain that are more active in creativity and mental
+                  imagery with a super-intelligent core of Metaverse-based
+                  games.
+                </AnimationOnScroll>
               </div>
             </div>
             <div className="mt-3">
@@ -253,12 +242,10 @@ const BMgalaxy: React.FC<BMgalaxyProps> = () => {
               Our Metaverse Game, Makes Connections Between The Player’s Brain
               Neurons.
             </div>
-            <div
-              className={`lg:left-[1400px] relative ${
-                scrollH >= 3700 ? "transition-origin" : ""
-              }`}
-            >
-              <img src={VainsImg} alt="galaxy" className="mt-[120px]" />
+            <div>
+              <AnimationOnScroll animateIn="bounce">
+                <img src={VainsImg} alt="galaxy" className="mt-[120px]" />
+              </AnimationOnScroll>
             </div>
 
             <div

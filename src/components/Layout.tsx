@@ -6,7 +6,6 @@ import Sidebar from "./Sidebar";
 interface layoutProps {
   children: React.ReactNode;
   className?: string;
-  scroll: number;
 }
 
 export default class Layout extends PureComponent<layoutProps> {

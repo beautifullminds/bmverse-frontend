@@ -21,7 +21,7 @@ const BMcard: React.FC<BMcardProps> = () => {
   }, []);
 
   return (
-    <Layout ref={layoutView} scroll={scrollH}>
+    <Layout ref={layoutView}>
       <div className="landing-container">
         <LandingHeader />
         <Menu />

@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 import Layout from "components/Layout";
 import Menu from "components/Menu";
 import BMblog from "components/blocks/BMblog";
@@ -27,7 +28,7 @@ const BMgame: React.FC<BMgameProps> = () => {
   }, []);
 
   return (
-    <Layout ref={layoutView} scroll={scrollH}>
+    <Layout ref={layoutView}>
       <div className="landing-container">
         <LandingHeader />
         <Menu />
@@ -39,11 +40,7 @@ const BMgame: React.FC<BMgameProps> = () => {
               Professionals
             </p>
             <div className="mt-[30px] grid md:grid-cols-2 grid-cols-1 gap-3">
-              <div
-                className={`md:mt-[150px] mt-2 lg:left-[-1000px] relative ${
-                  scrollH >= 0 ? "transition-origin" : ""
-                }`}
-              >
+              <div className="md:mt-[150px] mt-2">
                 <h4 className="text-23 font-bold">GAMIFICATION</h4>
                 <div className="text-18 border p-2 rounded-[18px] text-left">
                   Among all the projects working in the rarity field, the one
@@ -53,34 +50,34 @@ const BMgame: React.FC<BMgameProps> = () => {
                   would lead to project strength.
                 </div>
               </div>
-              <div
-                className={`lg:left-[1000px] relative ${
-                  scrollH >= 0 ? "transition-origin" : ""
-                }`}
-              >
+              <div>
                 <img src={Space} alt="space" />
               </div>
             </div>
             <p className="text-26 font-semibold mt-[40px] mb-2">
               Everything is ready for any game development team here.
             </p>
-            <div
-              className={`md:flex rounded-[120px] bg-[rgba(0,0,0,0.5)] py-[60px] px-4 md:px-[60px] shadow-[0px_10px_0px_rgba(0,0,0,0.2)] lg:top-[1000px] relative ${
-                scrollH > 240 ? "transition-origin" : ""
-              }`}
-            >
-              <div>
-                <img src={Stones} alt="stone" />
+            <AnimationOnScroll animateIn="fadeIn">
+              <div className="md:flex rounded-[120px] bg-[rgba(0,0,0,0.5)] py-[60px] px-4 md:px-[60px] shadow-[0px_10px_0px_rgba(0,0,0,0.2)]">
+                <div>
+                  <img src={Stones} alt="stone" />
+                </div>
+                <div className="text-left ml-6 mt-[50px] text-26 font-medium">
+                  <span>
+                    Amazing stories, game characters, and many exciting in-game
+                    items are all prepared for any professional video game
+                    development team in the blockchain space.
+                  </span>
+                </div>
               </div>
-              <div className="text-left ml-6 mt-[50px] text-26 font-medium">
-                <span>
-                  Amazing stories, game characters, and many exciting in-game
-                  items are all prepared for any professional video game
-                  development team in the blockchain space.
-                </span>
-              </div>
-            </div>
-            <img className="mx-auto my-[40px]" src={Abstract} alt="abstract" />
+            </AnimationOnScroll>
+            <AnimationOnScroll animateIn="bounceInLeft">
+              <img
+                className="mx-auto my-[40px]"
+                src={Abstract}
+                alt="abstract"
+              />
+            </AnimationOnScroll>
             <div
               className="font-semibold text-21 m-auto"
               style={{ maxWidth: "880px" }}
@@ -97,16 +94,14 @@ const BMgame: React.FC<BMgameProps> = () => {
               action by which We will show the alpha generation that man is a
               creator And not just a consumer.
             </div>
-            <div
-              className={`lg:left-[1000px] relative ${
-                scrollH > 1040 ? "transition-origin" : ""
-              }`}
-            >
+            <AnimationOnScroll animateIn="bounceInRight">
               <img className="mx-auto my-[40px]" src={Cons} alt="cons" />
-            </div>
-            <div className="font-semibold text-34">
-              Generations move one after another toward evolution
-            </div>
+            </AnimationOnScroll>
+            <AnimationOnScroll animateIn="flipInY">
+              <div className="font-semibold text-34">
+                Generations move one after another toward evolution
+              </div>
+            </AnimationOnScroll>
             <div
               className="font-semibold text-19 rounded-[18px] p-4 m-auto shadow-[-7px_7px_0px_rgba(0,0,0,0.1)]"
               style={{ maxWidth: "880px", background: "rgba(0,0,0,0.2)" }}

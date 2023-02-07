@@ -26,7 +26,7 @@ const BMmusic: React.FC<BMmusicProps> = () => {
   }, []);
 
   return (
-    <Layout ref={layoutView} scroll={scrollH}>
+    <Layout ref={layoutView}>
       <div className="landing-container">
         <LandingHeader />
         <Menu />

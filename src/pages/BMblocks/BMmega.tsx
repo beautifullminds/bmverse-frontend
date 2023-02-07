@@ -37,7 +37,7 @@ const BMmega: React.FC<BMmegaProps> = () => {
   }, []);
 
   return (
-    <Layout ref={layoutView} scroll={scrollH}>
+    <Layout ref={layoutView}>
       <div className="landing-container">
         <LandingHeader />
         <Menu />

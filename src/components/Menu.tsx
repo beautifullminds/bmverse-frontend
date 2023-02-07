@@ -1,4 +1,3 @@
-import configs from "configs";
 import React from "react";
 
 interface MenuProps {}

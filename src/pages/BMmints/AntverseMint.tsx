@@ -80,7 +80,7 @@ const AntverseMint: React.FC<AntverseMintProps> = () => {
   }, []);
 
   return (
-    <Layout ref={layoutView} scroll={scrollH}>
+    <Layout ref={layoutView}>
       <div
         className="text-center overflow-hidden pt-[93px] md:pt-[62px]"
         style={contentStyle}

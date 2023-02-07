@@ -6,7 +6,6 @@ import {
 } from "store/Wallet/wallet.selector";
 import { useAppDispatch, useAppSelector } from "store/hooks";
 import { onboard } from "ethereum/OnBoard";
-import configs from "configs";
 import Storage from "store/storage";
 
 import Logo from "assets/imgs/logo.png";
@@ -57,7 +56,7 @@ const Header: React.FC<HeaderProps> = () => {
           <img src={Logo} alt="logo" width={54} />
         </div>
         <div className="text-center md:w-1/3">
-          <a href="">
+          <a href="/">
             <img className="inline" src={LogoGod} width={62} alt="logo-god" />
             <span className="text-white text-22 lg:text-28 tracking-wide">
               BMVerse.io
