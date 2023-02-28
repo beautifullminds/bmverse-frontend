@@ -145,7 +145,7 @@ const BMpolicy: React.FC<BMpolicyProps> = () => {
                   style={{ color: "#2c899f", textDecoration: "underline" }}
                   className="pl-3"
                 >
-                  privacy@beautifulmindsfoundation.org
+                  Support@bmverse.io
                 </a>
                 .
               </div>

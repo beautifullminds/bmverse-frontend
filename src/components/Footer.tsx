@@ -1,8 +1,14 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import ScrollTopBtn from "./ScrollTopBtn";
 
 interface FooterProps {}
 
 const Footer: React.FC<FooterProps> = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section className="footer">
       <div className="bottom_footer">
@@ -22,6 +28,7 @@ const Footer: React.FC<FooterProps> = () => {
           <Link to="/bmp">Privacy Policy</Link>
         </div>
       </div>
+      <ScrollTopBtn />
     </section>
   );
 };

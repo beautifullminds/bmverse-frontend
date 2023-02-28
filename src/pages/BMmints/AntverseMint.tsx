@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import Layout from "components/Layout";
+import ScrollTopBtn from "components/ScrollTopBtn";
 
 import TmImg from "assets/imgs/antversemint/Tm.png";
 import DayaalaImg from "assets/imgs/antversemint/Daya'ala.png";
@@ -373,6 +374,7 @@ const AntverseMint: React.FC<AntverseMintProps> = () => {
           </AnimationOnScroll>
         </div>
       </div>
+      <ScrollTopBtn />
     </Layout>
   );
 };
