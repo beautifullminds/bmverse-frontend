@@ -41,24 +41,41 @@ const BMcollab: React.FC<BMcollabProps> = () => {
   const onSubmit = async () => {
     if (!email) {
       toast.warning("Please insert email!");
+      return;
     }
     if (email && !validateEmail(email)) {
       toast.warning("Please insert valid email!");
+      return;
+    }
+    if (!name) {
+      toast.warning("Please insert name!");
+      return;
     }
 
-    // const result = await sendEmail({
-    //   type,
-    //   name,
-    //   email,
-    //   conversance,
-    //   talent,
-    //   demand,
-    //   linked,
-    //   github,
-    //   fiction
-    // });
-    // console.log("res", result);
-    toast.success("The data is sent successfully");
+    const result = await sendEmail({
+      type,
+      name,
+      email,
+      conversance,
+      talent,
+      demand,
+      linked,
+      github,
+      fiction
+    });
+    if (result.status === 200) {
+      toast.success("The data is sent successfully");
+      setName("");
+      setEmail("");
+      setConversance("");
+      setTalent("");
+      setDemand("");
+      setFiction("");
+      setLinked("");
+      setGithub("");
+    } else {
+      toast.warning("Error occurred");
+    }
   };
 
   return (
@@ -107,15 +124,15 @@ const BMcollab: React.FC<BMcollabProps> = () => {
                 <div>
                   <input
                     className="border-1 rounded-md text-21 p-2 w-full mb-3 bg-transparent border"
-                    placeholder="E-Mail"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                  <input
-                    className="border-1 rounded-md text-21 p-2 w-full mb-3 bg-transparent border"
                     placeholder="Name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
+                  />
+                  <input
+                    className="border-1 rounded-md text-21 p-2 w-full mb-3 bg-transparent border"
+                    placeholder="E-Mail"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                   <input
                     className="border-1 rounded-md text-21 p-2 w-full mb-3 bg-transparent border"

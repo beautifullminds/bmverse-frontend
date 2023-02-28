@@ -4,7 +4,7 @@ export const sendEmail = async (data) => {
   return new Promise(async (resolve, reject) => {
     try {
       const res = await axios.post(
-        `https://thriving-bavarois-8c8553.netlify.app`,
+        `https://thriving-bavarois-8c8553.netlify.app/.netlify/functions/api/sendmail`,
         {
           headers: {
             "Content-Type": "application/x-www-form-urlencoded"
