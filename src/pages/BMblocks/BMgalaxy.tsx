@@ -5,6 +5,7 @@ import Menu from "components/Menu";
 import BMblog from "components/blocks/BMblog";
 import Collaborate from "components/blocks/Collaborate";
 import LandingHeader from "components/blocks/LandingHeader";
+import BMcontact from "components/blocks/BMcontact";
 import Footer from "components/Footer";
 
 import GalaxyImg from "assets/imgs/galaxy/galaxy.png";
@@ -283,6 +284,7 @@ const BMgalaxy: React.FC<BMgalaxyProps> = () => {
         <div className="com-content">
           <Collaborate />
         </div>
+        <BMcontact />
         <Footer />
       </div>
     </Layout>

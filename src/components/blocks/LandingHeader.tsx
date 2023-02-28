@@ -11,13 +11,17 @@ const LandingHeader: React.FC<LandingHeaderProps> = () => {
   const pagename = pathname.split("/")[pathname.split("/").length - 1];
 
   return (
-    <div style={headerImgStyle}>
-      <img
-        className="object-cover"
-        src={require(`assets/imgs/header/${pagename}-header.png`)}
-        alt="headerimage"
-      />
-    </div>
+    <>
+      {pagename !== "bmllabs" && (
+        <div style={headerImgStyle}>
+          <img
+            className="object-cover"
+            src={require(`assets/imgs/header/${pagename}-header.png`)}
+            alt="headerimage"
+          />
+        </div>
+      )}
+    </>
   );
 };
 

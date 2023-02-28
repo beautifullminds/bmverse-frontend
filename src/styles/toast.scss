@@ -1,0 +1,17 @@
+.Toastify__toast {
+  color: #fff !important;
+  font-weight: 600;
+  svg {
+    fill: #fff !important;
+  }
+  &--success {
+    background: rgba(#65dec1, 0.9) !important;
+  }
+  &--warning {
+    background: rgba(#fc6a34, 0.9) !important;
+  }
+}
+.Toastify__close-button--light {
+  opacity: 1 !important;
+  color: #fff !important;
+}

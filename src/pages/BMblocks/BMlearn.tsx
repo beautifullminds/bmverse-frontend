@@ -5,6 +5,7 @@ import Menu from "components/Menu";
 import BMblog from "components/blocks/BMblog";
 import Collaborate from "components/blocks/Collaborate";
 import LandingHeader from "components/blocks/LandingHeader";
+import BMcontact from "components/blocks/BMcontact";
 import Footer from "components/Footer";
 
 import Galaxy1Img from "assets/imgs/learn/galaxy1.png";
@@ -312,6 +313,7 @@ const BMlearn: React.FC<BMlearnProps> = () => {
         <div className="com-content">
           <Collaborate />
         </div>
+        <BMcontact />
         <Footer />
       </div>
     </Layout>

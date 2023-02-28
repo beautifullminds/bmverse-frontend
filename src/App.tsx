@@ -9,6 +9,8 @@ import BMcard from "pages/BMblocks/BMcard";
 import BMmega from "pages/BMblocks/BMmega";
 import BMjewel from "pages/BMblocks/BMjewel";
 import BMlearn from "pages/BMblocks/BMlearn";
+import BMcollab from "pages/BMblocks/BMcollab";
+import BMpolicy from "pages/BMblocks/BMpolicy";
 import AntverseMint from "pages/BMmints/AntverseMint";
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
       <Route path="/bmmega" element={<BMmega />} />
       <Route path="/bmjewel" element={<BMjewel />} />
       <Route path="/bmlearn" element={<BMlearn />} />
+      <Route path="/bmllabs" element={<BMcollab />} />
+      <Route path="/bmp" element={<BMpolicy />} />
       <Route path="/antversemint" element={<AntverseMint />} />
     </Routes>
   );
