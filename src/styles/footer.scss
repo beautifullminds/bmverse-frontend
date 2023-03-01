@@ -103,6 +103,7 @@
 
   .footer_div_1 {
     font-weight: 600;
+    display: flex;
   }
 
   .footer_div_2 {
@@ -120,6 +121,12 @@
   }
   .footer_div_2 a:hover {
     color: rgba(176, 109, 195, 0.933);
+  }
+
+  .footer_copyright {
+    margin-left: 10px;
+    position: relative;
+    top: 2px;
   }
 
   .footer_bmverse a {

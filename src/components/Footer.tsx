@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import ScrollTopBtn from "./ScrollTopBtn";
+import TrustedLogo from "../assets/imgs/trustedsite.svg";
 
 interface FooterProps {}
 
@@ -13,7 +14,8 @@ const Footer: React.FC<FooterProps> = () => {
     <section className="footer">
       <div className="bottom_footer">
         <div className="footer_div_1">
-          <h3>
+          <img src={TrustedLogo} alt="trustedlogo" />
+          <h3 className="footer_copyright">
             Copyright {new Date().getFullYear()} — Designed and Developed by{" "}
             <span className="footer_bmverse">
               <a href="/">BMverse</a>
