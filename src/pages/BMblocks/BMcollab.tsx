@@ -17,7 +17,7 @@ const CollaborateStyle = {
 
 const radioStyle = {
   border: "0px",
-  transform: "scale(2)",
+  transform: "scale(1.2)",
   marginRight: "0.7rem"
 };
 
@@ -36,7 +36,10 @@ const BMcollab: React.FC<BMcollabProps> = () => {
   const [demand, setDemand] = useState("");
   const [linked, setLinked] = useState("");
   const [github, setGithub] = useState("");
+  const [twitter, setTwitter] = useState("");
+  const [discord, setDiscord] = useState("");
   const [fiction, setFiction] = useState("");
+  const [incubator, setIncubator] = useState("");
 
   const onSubmit = async () => {
     if (!email) {
@@ -61,6 +64,9 @@ const BMcollab: React.FC<BMcollabProps> = () => {
       demand,
       linked,
       github,
+      twitter,
+      discord,
+      incubator,
       fiction
     });
     if (result.status === 200) {
@@ -73,6 +79,9 @@ const BMcollab: React.FC<BMcollabProps> = () => {
       setFiction("");
       setLinked("");
       setGithub("");
+      setDiscord("");
+      setTwitter("");
+      setIncubator("");
     } else {
       toast.warning("Error occurred");
     }
@@ -90,104 +99,140 @@ const BMcollab: React.FC<BMcollabProps> = () => {
                 Collaborate
               </h3>
             </div>
-            <div className="grid grid-cols-1 xl:grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 xl:grid-cols-2 m-auto gap-[50px] w-3/4">
               <div>
                 <div className="grid grid-cols-1 md:grid-cols-3 text-left mb-5 pl-4">
                   <div>
                     <input
+                      id="radio1"
                       type="radio"
                       style={radioStyle}
                       name="collaborater"
                       onClick={() => setType("Founder")}
                     />
-                     <label className="text-21 font-semibold">Founder</label>
+                     
+                    <label htmlFor="radio1" className="text-18 font-semibold">
+                      Founder
+                    </label>
                   </div>
                   <div>
                     <input
+                      id="radio2"
                       type="radio"
                       style={radioStyle}
                       name="collaborater"
                       onClick={() => setType("Developer")}
                     />
-                     <label className="text-21 font-semibold">Developer</label>
+                     
+                    <label htmlFor="radio2" className="text-18 font-semibold">
+                      Developer
+                    </label>
                   </div>
                   <div>
                     <input
+                      id="radio3"
                       type="radio"
                       style={radioStyle}
                       name="collaborater"
                       onClick={() => setType("Community")}
                     />
-                     <label className="text-21 font-semibold">Community</label>
+                     
+                    <label htmlFor="radio3" className="text-18 font-semibold">
+                      Community
+                    </label>
                   </div>
                 </div>
                 <div>
                   <input
-                    className="border-1 rounded-md text-21 p-2 w-full mb-3 bg-transparent border"
+                    className="border-1 rounded-md text-18 p-2 w-full mb-3 bg-transparent border"
                     placeholder="Name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                   />
                   <input
-                    className="border-1 rounded-md text-21 p-2 w-full mb-3 bg-transparent border"
+                    className="border-1 rounded-md text-18 p-2 w-full mb-3 bg-transparent border"
                     placeholder="E-Mail"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                   />
                   <input
-                    className="border-1 rounded-md text-21 p-2 w-full mb-3 bg-transparent border"
+                    className="border-1 rounded-md text-18 p-2 w-full mb-3 bg-transparent border"
                     placeholder="Conversance"
                     value={conversance}
                     onChange={(e) => setConversance(e.target.value)}
                   />
                   <input
-                    className="border-1 rounded-md text-21 p-2 w-full mb-3 bg-transparent border"
+                    className="border-1 rounded-md text-18 p-2 w-full mb-3 bg-transparent border"
                     placeholder="Innate talent"
                     value={talent}
                     onChange={(e) => setTalent(e.target.value)}
                   />
                   <input
-                    className="border-1 rounded-md text-21 p-2 w-full mb-3 bg-transparent border"
+                    className="border-1 rounded-md text-18 p-2 w-full mb-3 bg-transparent border"
                     placeholder="Demand type"
                     value={demand}
                     onChange={(e) => setDemand(e.target.value)}
                   />
                   <input
-                    className="border-1 rounded-md text-21 p-2 w-full mb-3 bg-transparent border"
-                    placeholder="Linkedin - Twitter"
+                    className="border-1 rounded-md text-18 p-2 w-full mb-3 bg-transparent border"
+                    placeholder="Linkedin"
                     value={linked}
                     onChange={(e) => setLinked(e.target.value)}
                   />
                   <input
-                    className="border-1 rounded-md text-21 p-2 w-full mb-3 bg-transparent border"
-                    placeholder="Github - Discord"
+                    className="border-1 rounded-md text-18 p-2 w-full mb-3 bg-transparent border"
+                    placeholder="Twitter"
+                    value={twitter}
+                    onChange={(e) => setTwitter(e.target.value)}
+                  />
+                  <input
+                    className="border-1 rounded-md text-18 p-2 w-full mb-3 bg-transparent border"
+                    placeholder="Github"
                     value={github}
                     onChange={(e) => setGithub(e.target.value)}
                   />
+                  <input
+                    className="border-1 rounded-md text-18 p-2 w-full mb-3 bg-transparent border"
+                    placeholder="Discord"
+                    value={discord}
+                    onChange={(e) => setDiscord(e.target.value)}
+                  />
+                  {type === "Founder" && (
+                    <input
+                      className="border-1 rounded-md text-18 p-2 w-full mb-3 bg-transparent border"
+                      placeholder="Incubator / Accelerator"
+                      value={incubator}
+                      onChange={(e) => setIncubator(e.target.value)}
+                    />
+                  )}
                 </div>
               </div>
-              <div className="relative pt-[30px]">
-                <div className="hex py-4">
-                  <textarea
-                    rows={15}
-                    className="bg-transparent w-full outline-none relative z-99 font-semibold h-[177px] md:h-[360px]"
-                    placeholder="What is the fiction about?"
-                    value={fiction}
-                    onChange={(e) => setFiction(e.target.value)}
-                  />
-                </div>
-                <div className="absolute h-[68px] overflow-hidden w-full m-auto submit-btn">
-                  <div
-                    className="hex text-black"
-                    style={{ background: "#fff" }}
-                  >
-                    <button
-                      className="text-43 text-black font-bold w-full relative"
-                      style={submitBtnStyle}
-                      onClick={onSubmit}
-                    >
-                      Submit
-                    </button>
+              <div className="flex justify-center items-center">
+                <div className="relative pt-[30px]">
+                  <div className="hex py-4">
+                    <textarea
+                      rows={15}
+                      className="bg-transparent w-full outline-none relative z-99 font-semibold h-[177px] md:h-[278px]"
+                      placeholder="What is the fiction about?"
+                      value={fiction}
+                      onChange={(e) => setFiction(e.target.value)}
+                    />
+                  </div>
+                  <div className="w-[220px] relative m-auto">
+                    <div className="absolute h-[68px] overflow-hidden w-full m-auto submit-btn">
+                      <div
+                        className="hex text-black"
+                        style={{ background: "#fff" }}
+                      >
+                        <button
+                          className="text-43 text-black font-bold w-full relative"
+                          style={submitBtnStyle}
+                          onClick={onSubmit}
+                        >
+                          Submit
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

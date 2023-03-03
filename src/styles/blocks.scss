@@ -43,8 +43,8 @@ body {
 .hex {
   position: relative;
   margin: auto;
-  width: 270px;
-  height: 460px;
+  width: 220px;
+  height: 372px;
   border-radius: 7px;
   background: transparent;
   transition: opacity 0.5s;
@@ -78,7 +78,9 @@ body {
 
 .submit-btn {
   transform: scaleY(-1);
-  top: 425px;
+  top: -67px;
+  width: 294px;
+  left: -36px;
 }
 
 .limited-text {
@@ -155,6 +157,8 @@ body {
 
   .submit-btn {
     transform: scaleY(-1);
-    top: 242px;
+    top: -69px;
+    left: -12px;
+    width: 246px;
   }
 }
