@@ -95,12 +95,12 @@ const BMcollab: React.FC<BMcollabProps> = () => {
         <div className="bm-content">
           <div style={CollaborateStyle}>
             <div className="text-center">
-              <h3 className="text-43 md:text-73 font-bold mb-[50px] border-y border-t-0 inline-block px-[50px]">
+              <h3 className="text-43 md:text-73 font-bold mb-[50px] border-y border-t-0 inline-block md:px-[50px]">
                 Collaborate
               </h3>
             </div>
-            <div className="grid grid-cols-1 xl:grid-cols-2 m-auto gap-[50px] w-3/4">
-              <div>
+            <div className="overflow-auto xl:w-[1000px] m-auto">
+              <div className="w-full md:w-[470px] xl:float-left">
                 <div className="grid grid-cols-1 md:grid-cols-3 text-left mb-5 pl-4">
                   <div>
                     <input
@@ -207,7 +207,10 @@ const BMcollab: React.FC<BMcollabProps> = () => {
                   )}
                 </div>
               </div>
-              <div className="flex justify-center items-center">
+              <div
+                className="w-[300px] md:w-[460px] xl:float-left md:mt-[50px] md:ml-[20px]"
+                style={{ position: "relative", left: "45px" }}
+              >
                 <div className="relative pt-[30px]">
                   <div className="hex py-4">
                     <textarea
