@@ -15,7 +15,7 @@ const LandingHeader: React.FC<LandingHeaderProps> = () => {
       {pagename !== "bmllabs" && (
         <div style={headerImgStyle}>
           <img
-            className="object-cover"
+            className="object-cover w-full"
             src={require(`assets/imgs/header/${pagename}-header.png`)}
             alt="headerimage"
           />
