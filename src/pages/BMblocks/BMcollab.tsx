@@ -42,6 +42,10 @@ const BMcollab: React.FC<BMcollabProps> = () => {
   const [incubator, setIncubator] = useState("");
 
   const onSubmit = async () => {
+    if (!type) {
+      toast.warning("Please select an option");
+      return;
+    }
     if (!email) {
       toast.warning("Please insert email!");
       return;
@@ -55,19 +59,65 @@ const BMcollab: React.FC<BMcollabProps> = () => {
       return;
     }
 
+    const showIncubator = type === "Founder" ? "" : "none";
+
+    const content = `<table>
+    <tbody style={{ fontSize: '20px' }}>
+      <tr>
+        <th>Type</th>
+        <td>${type}</td>
+      </tr>
+      <tr>
+        <th>Name</th>
+        <td>${name}</td>
+      </tr>
+      <tr>
+        <th>Email</th>
+        <td>${email}</td>
+      </tr>
+      <tr>
+        <th>Conversance</th>
+        <td>${conversance}</td>
+      </tr>
+      <tr>
+        <th>Innated talent</th>
+        <td>${talent}</td>
+      </tr>
+      <tr>
+        <th>Demand type</th>
+        <td>${demand}</td>
+      </tr>
+      <tr>
+        <th>Linkedin</th>
+        <td>${linked}</td>
+      </tr>
+      <tr>
+        <th>Twitter</th>
+        <td>${twitter}</td>
+      </tr>
+      <tr>
+        <th>Github</th>
+        <td>${github}</td>
+      </tr>
+      <tr>
+        <th>Discord</th>
+        <td>${discord}</td>
+      </tr>
+      <tr style="display:${showIncubator}">
+        <th>Incubator / Accelerator</th>
+        <td>${incubator}</td>
+      </tr>
+      <tr>
+        <th>Fiction</th>
+        <td>${fiction}</td>
+      </tr>
+    </tbody></table>`;
+
     const result = await sendEmail({
-      type,
-      name,
+      toAddress: "david.Y227@hotmail.com",
       email,
-      conversance,
-      talent,
-      demand,
-      linked,
-      github,
-      twitter,
-      discord,
-      incubator,
-      fiction
+      subject: "Collaborate",
+      content
     });
     if (result.status === 200) {
       toast.success("The data is sent successfully");
@@ -92,7 +142,7 @@ const BMcollab: React.FC<BMcollabProps> = () => {
       <div className="landing-container" style={{ minHeight: "auto" }}>
         <LandingHeader />
         <Menu />
-        <div className="bm-content">
+        <div className="bm-content collab">
           <div style={CollaborateStyle}>
             <div className="text-center">
               <h3 className="text-43 md:text-73 font-bold mb-[50px] border-y border-t-0 inline-block md:px-[50px]">

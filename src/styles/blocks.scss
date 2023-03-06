@@ -162,3 +162,10 @@ body {
     width: 246px;
   }
 }
+
+input {
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
