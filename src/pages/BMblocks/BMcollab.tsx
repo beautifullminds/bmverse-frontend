@@ -114,7 +114,7 @@ const BMcollab: React.FC<BMcollabProps> = () => {
     </tbody></table>`;
 
     const result = await sendEmail({
-      toAddress: "david.Y227@hotmail.com",
+      toAddress: "rare@bmverse.io",
       email,
       subject: "Collaborate",
       content
@@ -142,7 +142,7 @@ const BMcollab: React.FC<BMcollabProps> = () => {
       <div className="landing-container" style={{ minHeight: "auto" }}>
         <LandingHeader />
         <Menu />
-        <div className="bm-content collab">
+        <div className="bm-content">
           <div style={CollaborateStyle}>
             <div className="text-center">
               <h3 className="text-43 md:text-73 font-bold mb-[50px] border-y border-t-0 inline-block md:px-[50px]">
