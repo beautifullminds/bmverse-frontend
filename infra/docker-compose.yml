@@ -1,0 +1,19 @@
+# Local development only. Do not use sample credentials in production.
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: bmverse
+      POSTGRES_PASSWORD: local_dev_only_replace_me
+      POSTGRES_DB: bmverse
+    ports: ["127.0.0.1:5432:5432"]
+    volumes: ["postgres_data:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL","pg_isready -U bmverse"]
+      interval: 10s
+      retries: 5
+  redis:
+    image: redis:7-alpine
+    ports: ["127.0.0.1:6379:6379"]
+volumes:
+  postgres_data:

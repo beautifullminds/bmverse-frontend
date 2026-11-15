@@ -1,0 +1,50 @@
+name: BMverse v2.4.2 static platform
+on:
+  pull_request:
+    paths:
+      - 'platform/**'
+      - '.github/workflows/bmverse-platform-pages.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'platform/**'
+      - '.github/workflows/bmverse-platform-pages.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install platform dependencies
+        working-directory: platform
+        run: npm install --no-audit --no-fund
+      - name: Build export for GitHub Pages
+        working-directory: platform
+        env:
+          GITHUB_PAGES: 'true'
+        run: npm run build
+      - name: Disable Jekyll
+        run: touch platform/out/.nojekyll
+      - name: Upload static artifact
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: platform/out
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment
